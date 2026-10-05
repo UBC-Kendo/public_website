@@ -170,25 +170,23 @@ export default function Home() {
 
       {/* INSTRUCTORS */}
       <section style={{ maxWidth: '800px', margin: '60px auto', padding: '0 20px' }}>
-        <h2 style={{ textAlign: 'center' }}>Instructors</h2>
-        <div
-          style={{
-            display: 'grid',
-            gap: '16px',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-          }}
-        >
+        <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Instructors</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
           {INSTRUCTORS.map((ins, idx) => (
             <div
               key={idx}
               style={{
-                padding: '16px',
+                flex: '1 1 240px',
+                maxWidth: '300px',
+                padding: '20px',
                 border: '1px solid #e2e8f0',
                 borderRadius: '8px',
                 textAlign: 'center',
+                backgroundColor: '#fff',
+                boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
               }}
             >
-              <h3 style={{ margin: '0 0 4px 0' }}>{ins.name}</h3>
+              <h3 style={{ margin: '0 0 4px 0', color: '#0f172a' }}>{ins.name}</h3>
               <p style={{ color: '#2563eb', fontWeight: 'bold', margin: '0 0 4px 0' }}>
                 {ins.rank}
               </p>
@@ -198,31 +196,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* EXECUTIVE TEAM */}
+      {/* EXEC TEAM */}
       <section style={{ maxWidth: '800px', margin: '60px auto', padding: '0 20px' }}>
-        <h2 style={{ textAlign: 'center' }}>Executive Team</h2>
-        <div
-          style={{
-            display: 'grid',
-            gap: '16px',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-          }}
-        >
+        <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Executive Team 2026/2027</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
           {EXEC_TEAM.map((exec, idx) => (
             <div
               key={idx}
               style={{
-                padding: '16px',
+                flex: '1 1 240px',
+                maxWidth: '300px',
+                padding: '20px',
                 border: '1px solid #e2e8f0',
                 borderRadius: '8px',
                 textAlign: 'center',
+                backgroundColor: '#fff',
+                boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
               }}
             >
-              <h3 style={{ margin: '0 0 4px 0' }}>{exec.name}</h3>
-              <p style={{ color: '#2563eb', fontWeight: 'bold', margin: '0 0 4px 0' }}>
-                {exec.role}
-              </p>
-              <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>{exec.email}</p>
+              <h3 style={{ margin: '0 0 4px 0', color: '#0f172a' }}>{exec.name}</h3>
+              <p style={{ color: '#2563eb', fontWeight: 'bold', margin: 0 }}>{exec.role}</p>
             </div>
           ))}
         </div>
