@@ -31,47 +31,6 @@ export default function Contact() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
         }}
       >
-        {/* DIRECT CONTACT INFO */}
-        <div
-          style={{
-            backgroundColor: '#f8fafc',
-            padding: '24px',
-            borderRadius: '12px',
-            border: '1px solid #e2e8f0',
-          }}
-        >
-          <h2 style={{ fontSize: '1.25rem', color: '#0f172a', marginTop: 0 }}>Get in Touch</h2>
-
-          <div style={{ marginBottom: '16px' }}>
-            <strong style={{ display: 'block', color: '#334155' }}>📧 General Inquiries</strong>
-            <a
-              href="mailto:ubckendo@gmail.com"
-              style={{ color: '#2563eb', textDecoration: 'none' }}
-            >
-              ubckendo@gmail.com
-            </a>
-          </div>
-
-          <div style={{ marginBottom: '16px' }}>
-            <strong style={{ display: 'block', color: '#334155' }}>📸 Instagram</strong>
-            <a
-              href="https://instagram.com/ubckendo"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: '#2563eb', textDecoration: 'none' }}
-            >
-              @ubckendo
-            </a>
-          </div>
-
-          <div style={{ marginBottom: '24px' }}>
-            <strong style={{ display: 'block', color: '#334155' }}>📍 Practice Venues</strong>
-            <span style={{ fontSize: '0.9rem', color: '#64748b' }}>
-              AMS Nest & Asian Centre (UBC Vancouver Campus)
-            </span>
-          </div>
-        </div>
-
         {/* CONTACT FORM */}
         <div
           style={{
