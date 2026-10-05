@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { EVENT_PAGE_TITLE } from '../data/kendoData';
 
 export default function Navbar() {
   return (
@@ -27,6 +28,9 @@ export default function Navbar() {
         <div style={{ display: 'flex', gap: '20px' }}>
           <Link to="/" style={{ color: '#94a3b8', textDecoration: 'none', fontWeight: '500' }}>
             Home
+          </Link>
+          <Link to="/events" style={{ color: '#94a3b8', textDecoration: 'none', fontWeight: '500' }}>
+            {EVENT_PAGE_TITLE}
           </Link>
           <Link
             to="/contact"

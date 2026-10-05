@@ -72,3 +72,14 @@ export const FAQS = [
     a: 'No, we are opene to anyone who wishes to join and practice kendo. Email us at ubckendo@gmail.com for upcoming intake details!',
   },
 ];
+
+export const EVENT_PAGE_TITLE = "Taikai"
+
+export const EVENT_DATA = {
+  hasActiveEvent: false, // Toggle to true when a tournament/event is coming up
+  title: "2026 UBC Taikai",
+  date: "October 10, 2026",
+  location: "BCIT",
+  description: "Join us for our annual club tournament featuring team matches.",
+  bracketUrl: "", // Optional Challonge or embed link
+};
