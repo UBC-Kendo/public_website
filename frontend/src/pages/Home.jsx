@@ -169,15 +169,15 @@ export default function Home() {
       </section>
 
       {/* INSTRUCTORS */}
-      <section style={{ maxWidth: '800px', margin: '60px auto', padding: '0 20px' }}>
+      <section style={{ maxWidth: '1000px', margin: '60px auto', padding: '0 20px' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Instructors</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
           {INSTRUCTORS.map((ins, idx) => (
             <div
               key={idx}
               style={{
-                flex: '1 1 240px',
-                maxWidth: '300px',
+                flex: '1 1 280px',
+                maxWidth: '310px',
                 padding: '20px',
                 border: '1px solid #e2e8f0',
                 borderRadius: '8px',
@@ -197,15 +197,15 @@ export default function Home() {
       </section>
 
       {/* EXEC TEAM */}
-      <section style={{ maxWidth: '800px', margin: '60px auto', padding: '0 20px' }}>
+      <section style={{ maxWidth: '1000px', margin: '60px auto', padding: '0 20px' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Executive Team 2026/2027</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
           {EXEC_TEAM.map((exec, idx) => (
             <div
               key={idx}
               style={{
-                flex: '1 1 240px',
-                maxWidth: '300px',
+                flex: '1 1 280px',
+                maxWidth: '310px',
                 padding: '20px',
                 border: '1px solid #e2e8f0',
                 borderRadius: '8px',
