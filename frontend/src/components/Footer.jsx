@@ -105,11 +105,6 @@ export default function Footer() {
             {LOCATIONS.map((loc, idx) => (
               <li key={idx} style={{ lineHeight: '1.4' }}>
                 <span style={{ color: '#cbd5e1' }}>{loc.name}</span>
-                {loc.room && (
-                  <span style={{ display: 'block', fontSize: '0.85rem', color: '#64748b' }}>
-                    {loc.room}
-                  </span>
-                )}
               </li>
             ))}
           </ul>

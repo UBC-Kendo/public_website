@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { LOCATIONS, PRACTICE_SCHEDULE, EXEC_TEAM, INSTRUCTORS, FAQS } from '../data/kendoData';
+import { LOCATIONS, PRACTICE_SCHEDULE, EXEC_TERM, EXEC_TEAM, INSTRUCTORS, FAQS } from '../data/kendoData';
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -70,10 +70,6 @@ export default function Home() {
       <section id="schedule" style={{ backgroundColor: '#f8fafc', padding: '60px 20px' }}>
         <div style={{ maxWidth: '700px', margin: '0 auto' }}>
           <h2 style={{ textAlign: 'center', marginBottom: '8px' }}>Practice Schedule & Location</h2>
-          <p style={{ textAlign: 'center', color: '#64748b', marginTop: 0, marginBottom: '32px' }}>
-            Mondays & Thursdays • 7:00 PM – 10:00 PM
-          </p>
-
           <div
             style={{
               backgroundColor: '#fff',
@@ -198,7 +194,7 @@ export default function Home() {
 
       {/* EXEC TEAM */}
       <section style={{ maxWidth: '1000px', margin: '60px auto', padding: '0 20px' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Executive Team 2026/2027</h2>
+        <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Executive Team {EXEC_TERM}</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
           {EXEC_TEAM.map((exec, idx) => (
             <div

@@ -31,6 +31,8 @@ export const INSTRUCTORS = [
   { name: 'Nanako Nohira', rank: '4 Dan', role: 'Tozenji Sensei' },
 ];
 
+export const EXEC_TERM = '2026/2027';
+
 export const EXEC_TEAM = [
   {
     role: 'President',
