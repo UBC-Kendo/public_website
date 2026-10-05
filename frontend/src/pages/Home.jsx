@@ -23,20 +23,6 @@ export default function Home() {
         <p style={{ fontSize: '1.2rem', color: '#94a3b8', margin: '0 0 20px 0' }}>
           Official Martial Arts Club at the University of British Columbia • Est. 1978
         </p>
-        <a
-          href="#schedule"
-          style={{
-            display: 'inline-block',
-            backgroundColor: '#2563eb',
-            color: '#fff',
-            padding: '12px 24px',
-            borderRadius: '6px',
-            textDecoration: 'none',
-            fontWeight: 'bold',
-          }}
-        >
-          View Practice Schedule
-        </a>
       </section>
 
       {/* ABOUT SECTION */}
