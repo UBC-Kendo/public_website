@@ -172,56 +172,76 @@ export default function Home() {
       </section>
 
       {/* INSTRUCTORS */}
-      <section style={{ maxWidth: '1000px', margin: '60px auto', padding: '0 20px' }}>
+      <section style={{ maxWidth: '700px', margin: '60px auto', padding: '0 20px' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Instructors</h2>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
+        <ul
+          style={{
+            listStyle: 'none',
+            margin: 0,
+            padding: 0,
+            border: '1px solid #e2e8f0',
+            borderRadius: '8px',
+            backgroundColor: '#fff',
+            overflow: 'hidden',
+          }}
+        >
           {INSTRUCTORS.map((ins, idx) => (
-            <div
+            <li
               key={idx}
               style={{
-                flex: '1 1 280px',
-                maxWidth: '310px',
-                padding: '20px',
-                border: '1px solid #e2e8f0',
-                borderRadius: '8px',
-                textAlign: 'center',
-                backgroundColor: '#fff',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'baseline',
+                flexWrap: 'wrap',
+                gap: '4px 12px',
+                padding: '10px 16px',
+                borderTop: idx === 0 ? 'none' : '1px solid #e2e8f0',
               }}
             >
-              <h3 style={{ margin: '0 0 4px 0', color: '#0f172a' }}>{ins.name}</h3>
-              <p style={{ color: '#2563eb', fontWeight: 'bold', margin: '0 0 4px 0' }}>
-                {ins.rank}
-              </p>
-              <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>{ins.role}</p>
-            </div>
+              <span style={{ fontWeight: 'bold', color: '#0f172a' }}>{ins.name}</span>
+              <span style={{ fontSize: '0.9rem', color: '#64748b' }}>
+                <span style={{ color: '#2563eb', fontWeight: 'bold' }}>{ins.rank}</span> ·{' '}
+                {ins.role}
+              </span>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       {/* EXEC TEAM */}
-      <section style={{ maxWidth: '1000px', margin: '60px auto', padding: '0 20px' }}>
+      <section style={{ maxWidth: '700px', margin: '60px auto', padding: '0 20px' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Executive Team {EXEC_TERM}</h2>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
+        <ul
+          style={{
+            listStyle: 'none',
+            margin: 0,
+            padding: 0,
+            border: '1px solid #e2e8f0',
+            borderRadius: '8px',
+            backgroundColor: '#fff',
+            overflow: 'hidden',
+          }}
+        >
           {EXEC_TEAM.map((exec, idx) => (
-            <div
+            <li
               key={idx}
               style={{
-                flex: '1 1 280px',
-                maxWidth: '310px',
-                padding: '20px',
-                border: '1px solid #e2e8f0',
-                borderRadius: '8px',
-                textAlign: 'center',
-                backgroundColor: '#fff',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'baseline',
+                flexWrap: 'wrap',
+                gap: '4px 12px',
+                padding: '10px 16px',
+                borderTop: idx === 0 ? 'none' : '1px solid #e2e8f0',
               }}
             >
-              <h3 style={{ margin: '0 0 4px 0', color: '#0f172a' }}>{exec.name}</h3>
-              <p style={{ color: '#2563eb', fontWeight: 'bold', margin: 0 }}>{exec.role}</p>
-            </div>
+              <span style={{ fontWeight: 'bold', color: '#0f172a' }}>{exec.name}</span>
+              <span style={{ fontSize: '0.9rem', color: '#2563eb', fontWeight: 'bold' }}>
+                {exec.role}
+              </span>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       {/* FAQ SECTION */}
