@@ -1,161 +1,161 @@
-import { useState } from 'react';
-import { EXEC_TEAM } from '../data/kendoData';
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handles form submission (e.g. via Formspree or EmailJS)
-    setSubmitted(true);
-  };
+  const [state, handleSubmit] = useForm('maeqyzqj'); // TODO: CHANGE TO ACTUAL EMAIL LINK
 
   return (
     <div
       style={{
-        maxWidth: '800px',
+        maxWidth: '600px',
         margin: '40px auto',
         padding: '0 20px',
         fontFamily: 'sans-serif',
       }}
     >
       <h1 style={{ textAlign: 'center', color: '#0f172a', marginBottom: '8px' }}>Contact Us</h1>
-      <p style={{ textAlign: 'center', color: '#64748b', marginBottom: '40px' }}>
-        Have any questions? Send us a message or reach out on social media.
+      <p style={{ textAlign: 'center', color: '#64748b', marginBottom: '32px' }}>
+        Have questions about joining, dues, or practice schedules? Send us a message!
       </p>
 
+      {/* CONTACT FORM */}
       <div
         style={{
-          display: 'grid',
-          gap: '32px',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          backgroundColor: '#fff',
+          padding: '24px',
+          borderRadius: '12px',
+          border: '1px solid #e2e8f0',
+          boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
         }}
       >
-        {/* CONTACT FORM */}
-        <div
-          style={{
-            backgroundColor: '#fff',
-            padding: '24px',
-            borderRadius: '12px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
-          }}
-        >
-          <h2 style={{ fontSize: '1.25rem', color: '#0f172a', marginTop: 0 }}>Send a Message</h2>
-
-          {submitted ? (
-            <div
-              style={{
-                padding: '16px',
-                backgroundColor: '#f0fdf4',
-                border: '1px solid #bbf7d0',
-                borderRadius: '8px',
-                color: '#166534',
-              }}
-            >
-              <strong>Thank you!</strong> Your message has been sent. We'll get back to you shortly.
-            </div>
-          ) : (
-            <form
-              onSubmit={handleSubmit}
-              style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
-            >
-              <div>
-                <label
-                  style={{
-                    display: 'block',
-                    fontSize: '0.875rem',
-                    fontWeight: 'bold',
-                    marginBottom: '4px',
-                    color: '#334155',
-                  }}
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  required
-                  placeholder="Your Name"
-                  style={{
-                    width: '100%',
-                    padding: '10px',
-                    borderRadius: '6px',
-                    border: '1px solid #cbd5e1',
-                    boxSizing: 'border-box',
-                  }}
-                />
-              </div>
-
-              <div>
-                <label
-                  style={{
-                    display: 'block',
-                    fontSize: '0.875rem',
-                    fontWeight: 'bold',
-                    marginBottom: '4px',
-                    color: '#334155',
-                  }}
-                >
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  required
-                  placeholder="your.email@example.com"
-                  style={{
-                    width: '100%',
-                    padding: '10px',
-                    borderRadius: '6px',
-                    border: '1px solid #cbd5e1',
-                    boxSizing: 'border-box',
-                  }}
-                />
-              </div>
-
-              <div>
-                <label
-                  style={{
-                    display: 'block',
-                    fontSize: '0.875rem',
-                    fontWeight: 'bold',
-                    marginBottom: '4px',
-                    color: '#334155',
-                  }}
-                >
-                  Message
-                </label>
-                <textarea
-                  rows="4"
-                  required
-                  placeholder="How can we help you?"
-                  style={{
-                    width: '100%',
-                    padding: '10px',
-                    borderRadius: '6px',
-                    border: '1px solid #cbd5e1',
-                    boxSizing: 'border-box',
-                    fontFamily: 'inherit',
-                  }}
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
+        {state.succeeded ? (
+          <div
+            style={{
+              padding: '16px',
+              backgroundColor: '#f0fdf4',
+              border: '1px solid #bbf7d0',
+              borderRadius: '8px',
+              color: '#166534',
+              textAlign: 'center',
+            }}
+          >
+            <strong>Thank you!</strong> Your message has been sent. We'll get back to you shortly.
+          </div>
+        ) : (
+          <form
+            onSubmit={handleSubmit}
+            style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
+          >
+            <div>
+              <label
                 style={{
-                  backgroundColor: '#2563eb',
-                  color: '#fff',
-                  border: 'none',
-                  padding: '12px',
-                  borderRadius: '6px',
+                  display: 'block',
+                  fontSize: '0.875rem',
                   fontWeight: 'bold',
-                  cursor: 'pointer',
+                  marginBottom: '4px',
+                  color: '#334155',
                 }}
               >
-                Send Message
-              </button>
-            </form>
-          )}
-        </div>
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Your Name"
+                style={{
+                  width: '100%',
+                  padding: '10px',
+                  borderRadius: '6px',
+                  border: '1px solid #cbd5e1',
+                  boxSizing: 'border-box',
+                }}
+              />
+            </div>
+
+            <div>
+              <label
+                style={{
+                  display: 'block',
+                  fontSize: '0.875rem',
+                  fontWeight: 'bold',
+                  marginBottom: '4px',
+                  color: '#334155',
+                }}
+              >
+                Email Address
+              </label>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="your.email@example.com"
+                style={{
+                  width: '100%',
+                  padding: '10px',
+                  borderRadius: '6px',
+                  border: '1px solid #cbd5e1',
+                  boxSizing: 'border-box',
+                }}
+              />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+                style={{ color: '#dc2626', fontSize: '0.8rem', marginTop: '4px' }}
+              />
+            </div>
+
+            <div>
+              <label
+                style={{
+                  display: 'block',
+                  fontSize: '0.875rem',
+                  fontWeight: 'bold',
+                  marginBottom: '4px',
+                  color: '#334155',
+                }}
+              >
+                Message
+              </label>
+              <textarea
+                name="message"
+                rows="5"
+                required
+                placeholder="How can we help you?"
+                style={{
+                  width: '100%',
+                  padding: '10px',
+                  borderRadius: '6px',
+                  border: '1px solid #cbd5e1',
+                  boxSizing: 'border-box',
+                  fontFamily: 'inherit',
+                }}
+              ></textarea>
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+                style={{ color: '#dc2626', fontSize: '0.8rem', marginTop: '4px' }}
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={state.submitting}
+              style={{
+                backgroundColor: state.submitting ? '#94a3b8' : '#2563eb',
+                color: '#fff',
+                border: 'none',
+                padding: '12px',
+                borderRadius: '6px',
+                fontWeight: 'bold',
+                cursor: state.submitting ? 'not-allowed' : 'pointer',
+              }}
+            >
+              {state.submitting ? 'Sending...' : 'Send Message'}
+            </button>
+          </form>
+        )}
       </div>
     </div>
   );
