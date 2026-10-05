@@ -25,7 +25,7 @@ export default function Navbar() {
         >
           UBC KENDO
         </Link>
-        <div style={{ display: 'flex', gap: '20px' }}>
+        <div style={{ display: 'flex', gap: '14px', whiteSpace: 'nowrap' }}>
           <Link to="/" style={{ color: '#94a3b8', textDecoration: 'none', fontWeight: '500' }}>
             Home
           </Link>
