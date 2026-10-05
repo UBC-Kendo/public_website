@@ -23,6 +23,12 @@ export const INSTRUCTORS = [
   { name: 'Tsuyoshi Hamanaka', rank: '6 Dan Renshi', role: 'Head Sensei' },
   { name: 'Joon Young Suk', rank: '5 Dan', role: 'UBC Sensei' },
   { name: 'Ellis Cheng', rank: '4 Dan', role: 'UBC Sensei' },
+  { name: 'Kazuki Unzei', rank: '5 Dan', role: 'Tozenji Sensei' },
+  { name: 'Yukiko Sugata', rank: '5 Dan', role: 'Tozenji Sensei' },
+  { name: 'Terry Okitsu', rank: '4 Dan', role: 'Tozenji Sensei' },
+  { name: 'Mari Kobayashi', rank: '4 Dan', role: 'Tozenji Sensei' },
+  { name: 'Andrew Chen', rank: '4 Dan', role: 'Tozenji Sensei' },
+  { name: 'Nanako Nohira', rank: '4 Dan', role: 'Tozenji Sensei' },
 ];
 
 export const EXEC_TEAM = [
@@ -73,13 +79,14 @@ export const FAQS = [
   },
 ];
 
-export const EVENT_PAGE_TITLE = "Taikai"
+export const EVENT_PAGE_TITLE = 'Taikai';
 
+// NOT FULLY DONE
 export const EVENT_DATA = {
   hasActiveEvent: false, // Toggle to true when a tournament/event is coming up
-  title: "2026 UBC Taikai",
-  date: "October 10, 2026",
-  location: "BCIT",
-  description: "Join us for our annual club tournament featuring team matches.",
-  bracketUrl: "", // Optional Challonge or embed link
+  title: '2026 UBC Taikai',
+  date: 'October 10, 2026',
+  location: 'BCIT',
+  description: 'Join us for our annual club tournament featuring team matches.',
+  bracketUrl: '', // Optional
 };
