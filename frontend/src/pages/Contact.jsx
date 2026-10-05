@@ -59,7 +59,8 @@ export default function Contact() {
               </label>
               <input
                 htmlFor="name"
-                input id="name"
+                input
+                id="name"
                 type="text"
                 name="name"
                 required
@@ -88,7 +89,8 @@ export default function Contact() {
                 Email Address
               </label>
               <input
-                input id="email"
+                input
+                id="email"
                 type="email"
                 name="email"
                 required
@@ -123,7 +125,8 @@ export default function Contact() {
                 Message
               </label>
               <textarea
-                textarea id="message"
+                textarea
+                id="message"
                 name="message"
                 rows="5"
                 required

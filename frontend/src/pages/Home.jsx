@@ -1,5 +1,12 @@
 import { useState } from 'react';
-import { LOCATIONS, PRACTICE_SCHEDULE, EXEC_TERM, EXEC_TEAM, INSTRUCTORS, FAQS } from '../data/kendoData';
+import {
+  LOCATIONS,
+  PRACTICE_SCHEDULE,
+  EXEC_TERM,
+  EXEC_TEAM,
+  INSTRUCTORS,
+  FAQS,
+} from '../data/kendoData';
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState(null);
