@@ -29,6 +29,9 @@ export default function Home() {
       <section
         style={{ maxWidth: '800px', margin: '60px auto', padding: '0 20px', textAlign: 'center' }}
       >
+        <h2 style={{ fontSize: '2.25rem', color: '#0f172a', margin: '0 0 8px 0' }}>
+          ABOUT UBC KENDO CLUB
+        </h2>
         <p
           style={{
             color: '#2563eb',
@@ -40,9 +43,6 @@ export default function Home() {
         >
           EST. 1978
         </p>
-        <h2 style={{ fontSize: '2.25rem', color: '#0f172a', margin: '0 0 8px 0' }}>
-          ABOUT UBC KENDO CLUB
-        </h2>
         <h3
           style={{
             fontSize: '1.25rem',
@@ -277,30 +277,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* FOOTER */}
-      <footer
-        style={{
-          backgroundColor: '#0f172a',
-          color: '#94a3b8',
-          padding: '40px 20px',
-          textAlign: 'center',
-        }}
-      >
-        <p style={{ margin: '0 0 10px 0' }}>
-          <strong>UBC Kendo Club</strong> • AMS Student Society
-        </p>
-        <p style={{ margin: 0 }}>
-          Email:{' '}
-          <a href="mailto:ubckendo@gmail.com" style={{ color: '#60a5fa' }}>
-            ubckendo@gmail.com
-          </a>{' '}
-          | Instagram:{' '}
-          <a href="https://instagram.com/ubckendo" style={{ color: '#60a5fa' }}>
-            @ubckendo
-          </a>
-        </p>
-      </footer>
     </div>
   );
 }
