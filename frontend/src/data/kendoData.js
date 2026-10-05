@@ -74,8 +74,8 @@ export const FAQS = [
     a: 'No. We encourage our members to come as much as they can for their own improvement, but we also understand the need for time off to do other matters.',
   },
   {
-    q: 'Do I need to be a UBC student to join the club',
-    a: 'No, we are opene to anyone who wishes to join and practice kendo. Email us at ubckendo@gmail.com for upcoming intake details!',
+    q: 'Do I need to be a UBC student to join the club?',
+    a: 'No, we are open to anyone who wishes to join and practice kendo. Email us at ubckendo@gmail.com for upcoming intake details!',
   },
 ];
 
