@@ -29,7 +29,10 @@ export default function Navbar() {
           <Link to="/" style={{ color: '#94a3b8', textDecoration: 'none', fontWeight: '500' }}>
             Home
           </Link>
-          <Link to="/events" style={{ color: '#94a3b8', textDecoration: 'none', fontWeight: '500' }}>
+          <Link
+            to="/events"
+            style={{ color: '#94a3b8', textDecoration: 'none', fontWeight: '500' }}
+          >
             {EVENT_PAGE_TITLE}
           </Link>
           <Link
