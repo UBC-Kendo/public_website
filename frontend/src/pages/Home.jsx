@@ -236,6 +236,7 @@ export default function Home() {
                 >
                   <button
                     onClick={() => toggleFaq(idx)}
+                    aria-expanded={isOpen}
                     style={{
                       width: '100%',
                       padding: '16px 20px',
