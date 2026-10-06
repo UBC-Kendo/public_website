@@ -19,11 +19,12 @@ export default function Navbar() {
           alignItems: 'center',
         }}
       >
-        <Link
-          to="/"
-          style={{ color: '#fff', textDecoration: 'none', fontWeight: 'bold', fontSize: '1.2rem' }}
-        >
-          UBC KENDO
+        <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
+          <img
+            src="/logo.png"
+            alt="UBC Kendo Club"
+            style={{ height: '64px', width: 'auto', display: 'block' }}
+          />
         </Link>
         <div style={{ display: 'flex', gap: '14px', whiteSpace: 'nowrap' }}>
           <Link to="/" style={{ color: '#94a3b8', textDecoration: 'none', fontWeight: '500' }}>
