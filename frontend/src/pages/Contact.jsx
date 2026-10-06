@@ -148,6 +148,11 @@ export default function Contact() {
               />
             </div>
 
+            <ValidationError
+              errors={state.errors}
+              style={{ color: '#dc2626', fontSize: '0.85rem' }}
+            />
+
             <button
               type="submit"
               disabled={state.submitting}

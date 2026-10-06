@@ -108,7 +108,7 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-          <p style={{ fontSize: '0.85rem', color: '#64748b', lineHeight: '1.5', margin: 0 }}>
+          <p style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: '1.5', margin: 0 }}>
             University of British Columbia
             <br />
             Vancouver, BC V6T 1Z1

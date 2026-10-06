@@ -164,7 +164,7 @@ export default function Home() {
             >
               <p style={{ margin: 0, fontSize: '0.95rem', color: '#92400e', fontWeight: '500' }}>
                 <strong>Check the Mailing List:</strong> Location may vary from one week to another
-                between the Nest and Asian Centre. Always check the latest mailing list email or 
+                between the Nest and Asian Centre. Always check the latest mailing list email or
                 Instagram story before heading out.
               </p>
             </div>
