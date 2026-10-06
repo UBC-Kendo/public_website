@@ -26,82 +26,40 @@ export default function Home() {
   return (
     <div style={{ fontFamily: 'sans-serif', color: '#1a1a1a', lineHeight: '1.6' }}>
       {/* HERO SECTION */}
-      <section
-        style={{
-          backgroundColor: '#0f172a',
-          color: '#fff',
-          padding: '80px 20px',
-          textAlign: 'center',
-        }}
-      >
-        <h1 style={{ fontSize: 'clamp(2rem, 8vw, 3rem)', margin: '0 0 10px 0' }}>UBC KENDO CLUB</h1>
-        <p style={{ fontSize: '1.2rem', color: '#94a3b8', margin: '0 0 20px 0' }}>
+      <section className="home__hero">
+        <h1 className="home__hero-title">UBC KENDO CLUB</h1>
+        <p className="home__hero-subtitle">
           Official Martial Arts Club at the University of British Columbia • Est. 1978
         </p>
       </section>
 
       {/* ABOUT SECTION */}
-      <section
-        style={{ maxWidth: '800px', margin: '60px auto', padding: '0 20px', textAlign: 'center' }}
-      >
-        <h2 style={{ fontSize: '2.25rem', color: '#0f172a', margin: '0 0 8px 0' }}>
-          ABOUT UBC KENDO CLUB
-        </h2>
-        <p
-          style={{
-            color: '#2563eb',
-            fontWeight: 'bold',
-            letterSpacing: '0.05em',
-            textTransform: 'uppercase',
-            marginBottom: '8px',
-          }}
-        >
-          EST. 1978
-        </p>
-        <h3
-          style={{
-            fontSize: '1.25rem',
-            color: '#64748b',
-            fontWeight: 'normal',
-            margin: '0 0 24px 0',
-          }}
-        >
-          More than just a club
-        </h3>
-        <p
-          style={{ color: '#334155', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '16px' }}
-        >
+      <section className="home__about">
+        <h2 className="home__about-title">ABOUT UBC KENDO CLUB</h2>
+        <p className="home__about-tag">EST. 1978</p>
+        <h3 className="home__about-subtitle">More than just a club</h3>
+        <p className="home__about-copy home__about-copy--top">
           University of British Columbia Kendo Club is a student-led recreational martial art club.
           Although we are mostly comprised of UBC students and alumni, we also welcome anyone
           outside of UBC to join us and practice kendo with us.
         </p>
-        <p style={{ color: '#334155', fontSize: '1.05rem', lineHeight: '1.7', margin: 0 }}>
+        <p className="home__about-copy">
           We are here to teach our members the etiquette and skills in Kendo. As a member, you will
           also have a chance to develop skills such as self-confidence, leadership, and teamwork.
         </p>
       </section>
 
       {/* SCHEDULE & LOCATIONS */}
-      <section id="schedule" style={{ backgroundColor: '#f8fafc', padding: '60px 20px' }}>
-        <div style={{ maxWidth: '700px', margin: '0 auto' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: '8px' }}>Practice Schedule & Location</h2>
-          <div
-            style={{
-              backgroundColor: '#fff',
-              padding: '28px',
-              borderRadius: '12px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
-              border: '1px solid #e2e8f0',
-            }}
-          >
+      <section id="schedule" className="home__schedule">
+        <div className="home__schedule-inner">
+          <h2 className="home__schedule-title">Practice Schedule & Location</h2>
+          <div className="home__schedule-card">
             {/* TIMES */}
-            <div style={{ marginBottom: '24px' }}>
+            <div className="home__schedule-times">
               {PRACTICE_SCHEDULE.map((sched, idx) => (
                 <div key={idx}>
-                  <h3 style={{ margin: '0 0 8px 0', color: '#0f172a' }}>
-                    Practice Hours ({sched.day})
-                  </h3>
-                  <ul style={{ margin: 0, paddingLeft: '20px', color: '#334155' }}>
+                  <h3 className="home__schedule-heading">Practice Hours ({sched.day})</h3>
+                  <ul className="home__schedule-list">
                     <li>
                       <strong>Beginners:</strong> {sched.beginner}
                     </li>
@@ -114,44 +72,20 @@ export default function Home() {
             </div>
 
             {/* LOCATIONS WITH MAP LINKS */}
-            <div style={{ marginBottom: '24px' }}>
-              <h3 style={{ margin: '0 0 12px 0', color: '#0f172a' }}>📍 Location </h3>
-              <div
-                style={{
-                  display: 'grid',
-                  gap: '12px',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-                }}
-              >
+            <div className="home__locations-wrap">
+              <h3 className="home__locations-title">📍 Location </h3>
+              <div className="home__location-grid">
                 {LOCATIONS.map((loc, idx) => (
-                  <div
-                    key={idx}
-                    style={{
-                      padding: '12px 16px',
-                      backgroundColor: '#f1f5f9',
-                      borderRadius: '8px',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'space-between',
-                    }}
-                  >
+                  <div key={idx} className="home__location-card">
                     <div>
-                      <strong style={{ color: '#0f172a' }}>{loc.name}</strong>
-                      <p style={{ margin: '4px 0 12px 0', fontSize: '0.85rem', color: '#64748b' }}>
-                        {loc.address}
-                      </p>
+                      <strong className="home__location-name">{loc.name}</strong>
+                      <p className="home__location-address">{loc.address}</p>
                     </div>
                     <a
                       href={loc.mapUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{
-                        display: 'inline-block',
-                        fontSize: '0.85rem',
-                        color: '#2563eb',
-                        fontWeight: 'bold',
-                        textDecoration: 'none',
-                      }}
+                      className="home__map-link"
                     >
                       Open in Google Maps ↗
                     </a>
@@ -161,31 +95,21 @@ export default function Home() {
             </div>
 
             {/* MAILING LIST NOTICE */}
-            <div
-              style={{
-                padding: '16px',
-                backgroundColor: '#fef2f2',
-                border: '1px solid #fecaca',
-                borderRadius: '8px',
-              }}
-            >
-              <p style={{ margin: 0, fontSize: '0.95rem', color: '#92400e', fontWeight: '500' }}>
+            <div className="home__mailing-notice">
+              <p className="home__mailing-text">
                 <strong>Check the Mailing List:</strong> Location may vary from one week to another
                 between the Nest and Asian Centre. Always check the latest mailing list email or
                 Instagram story before heading out.
               </p>
             </div>
-            <br></br>
             {/* CALENDAR EMBED */}
             {CALENDAR_EMBED_URL && (
-              <details style={{ marginBottom: '24px' }}>
-                <summary style={{ cursor: 'pointer', fontWeight: 'bold', color: '#0f172a' }}>
-                  View upcoming practices
-                </summary>
+              <details className="home__calendar-details">
+                <summary className="home__calendar-summary">View upcoming practices</summary>
                 <iframe
                   src={CALENDAR_EMBED_URL}
                   title="UBC Kendo practice calendar"
-                  style={{ width: '100%', height: '300px', border: 0, marginTop: '12px' }}
+                  className="home__calendar-iframe"
                 ></iframe>
               </details>
             )}
@@ -194,49 +118,21 @@ export default function Home() {
       </section>
 
       {/* INSTRUCTORS */}
-      {/* INSTRUCTORS */}
-      <section style={{ maxWidth: '700px', margin: '60px auto', padding: '0 20px' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Instructors</h2>
+      <section className="home__staff-section">
+        <h2 className="home__staff-title">Instructors</h2>
         {instructorGroups.map((group) => (
-          <div key={group.role} style={{ marginBottom: '24px' }}>
-            <h3
-              style={{
-                margin: '0 0 8px 0',
-                fontSize: '0.85rem',
-                color: '#64748b',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-              }}
-            >
-              {group.role}
-            </h3>
-            <ul
-              style={{
-                listStyle: 'none',
-                margin: 0,
-                padding: 0,
-                border: '1px solid #e2e8f0',
-                borderRadius: '8px',
-                backgroundColor: '#fff',
-                overflow: 'hidden',
-              }}
-            >
+          <div key={group.role} className="home__staff-group">
+            <h3 className="home__staff-label">{group.role}</h3>
+            <ul className="home__staff-list">
               {group.members.map((ins, idx) => (
                 <li
                   key={ins.name}
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'baseline',
-                    gap: '12px',
-                    padding: '10px 16px',
-                    borderTop: idx === 0 ? 'none' : '1px solid #e2e8f0',
-                  }}
+                  className={
+                    idx === 0 ? 'home__staff-item' : 'home__staff-item home__staff-item--bordered'
+                  }
                 >
-                  <span style={{ fontWeight: 'bold', color: '#0f172a' }}>{ins.name}</span>
-                  <span style={{ fontSize: '0.9rem', color: '#2563eb', fontWeight: 'bold' }}>
-                    {ins.rank}
-                  </span>
+                  <span className="home__staff-name">{ins.name}</span>
+                  <span className="home__staff-rank">{ins.rank}</span>
                 </li>
               ))}
             </ul>
@@ -245,90 +141,43 @@ export default function Home() {
       </section>
 
       {/* EXEC TEAM */}
-      <section style={{ maxWidth: '700px', margin: '60px auto', padding: '0 20px' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Executive Team {EXEC_TERM}</h2>
-        <ul
-          style={{
-            listStyle: 'none',
-            margin: 0,
-            padding: 0,
-            border: '1px solid #e2e8f0',
-            borderRadius: '8px',
-            backgroundColor: '#fff',
-            overflow: 'hidden',
-          }}
-        >
+      <section className="home__staff-section">
+        <h2 className="home__staff-title">Executive Team {EXEC_TERM}</h2>
+        <ul className="home__staff-list">
           {EXEC_TEAM.map((exec, idx) => (
             <li
               key={idx}
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'baseline',
-                flexWrap: 'wrap',
-                gap: '4px 12px',
-                padding: '10px 16px',
-                borderTop: idx === 0 ? 'none' : '1px solid #e2e8f0',
-              }}
+              className={
+                idx === 0 ? 'home__staff-item' : 'home__staff-item home__staff-item--bordered'
+              }
             >
-              <span style={{ fontWeight: 'bold', color: '#0f172a' }}>{exec.name}</span>
-              <span style={{ fontSize: '0.9rem', color: '#2563eb', fontWeight: 'bold' }}>
-                {exec.role}
-              </span>
+              <span className="home__staff-name">{exec.name}</span>
+              <span className="home__staff-rank">{exec.role}</span>
             </li>
           ))}
         </ul>
       </section>
 
       {/* FAQ SECTION */}
-      <section style={{ backgroundColor: '#f8fafc', padding: '60px 20px' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h2 style={{ textAlign: 'center' }}>Frequently Asked Questions</h2>
-          <div style={{ display: 'grid', gap: '12px' }}>
+      <section className="home__faq">
+        <div className="home__faq-inner">
+          <h2 className="home__faq-title">Frequently Asked Questions</h2>
+          <div className="home__faq-list">
             {FAQS.map((faq, idx) => {
               const isOpen = openFaq === idx;
               return (
-                <div
-                  key={idx}
-                  style={{
-                    backgroundColor: '#fff',
-                    borderRadius: '8px',
-                    border: '1px solid #e2e8f0',
-                    overflow: 'hidden',
-                  }}
-                >
+                <div key={idx} className="home__faq-item">
                   <button
                     onClick={() => toggleFaq(idx)}
                     aria-expanded={isOpen}
-                    style={{
-                      width: '100%',
-                      padding: '16px 20px',
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      backgroundColor: 'transparent',
-                      border: 'none',
-                      textAlign: 'left',
-                      fontSize: '1.05rem',
-                      fontWeight: 'bold',
-                      color: '#0f172a',
-                      cursor: 'pointer',
-                    }}
+                    className="home__faq-button"
                   >
                     <span>{faq.q}</span>
-                    <span style={{ fontSize: '1.2rem', marginLeft: '10px' }}>
-                      {isOpen ? '−' : '+'}
-                    </span>
+                    <span className="home__faq-toggle">{isOpen ? '−' : '+'}</span>
                   </button>
                   {isOpen && (
-                    <div
-                      style={{
-                        padding: '0 20px 16px 20px',
-                        color: '#475569',
-                        borderTop: '1px solid #f1f5f9',
-                      }}
-                    >
-                      <p style={{ margin: '12px 0 0 0' }}>{faq.a}</p>
+                    <div className="home__faq-answer">
+                      <p className="home__faq-answer-text">{faq.a}</p>
                     </div>
                   )}
                 </div>
