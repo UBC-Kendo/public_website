@@ -16,6 +16,13 @@ export default function Home() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
+  const instructorGroups = INSTRUCTORS.reduce((groups, ins) => {
+    const group = groups.find((g) => g.role === ins.role);
+    if (group) group.members.push(ins);
+    else groups.push({ role: ins.role, members: [ins] });
+    return groups;
+  }, []);
+
   return (
     <div style={{ fontFamily: 'sans-serif', color: '#1a1a1a', lineHeight: '1.6' }}>
       {/* HERO SECTION */}
@@ -187,40 +194,54 @@ export default function Home() {
       </section>
 
       {/* INSTRUCTORS */}
+      {/* INSTRUCTORS */}
       <section style={{ maxWidth: '700px', margin: '60px auto', padding: '0 20px' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '24px' }}>Instructors</h2>
-        <ul
-          style={{
-            listStyle: 'none',
-            margin: 0,
-            padding: 0,
-            border: '1px solid #e2e8f0',
-            borderRadius: '8px',
-            backgroundColor: '#fff',
-            overflow: 'hidden',
-          }}
-        >
-          {INSTRUCTORS.map((ins, idx) => (
-            <li
-              key={idx}
+        {instructorGroups.map((group) => (
+          <div key={group.role} style={{ marginBottom: '24px' }}>
+            <h3
               style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'baseline',
-                flexWrap: 'wrap',
-                gap: '4px 12px',
-                padding: '10px 16px',
-                borderTop: idx === 0 ? 'none' : '1px solid #e2e8f0',
+                margin: '0 0 8px 0',
+                fontSize: '0.85rem',
+                color: '#64748b',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
               }}
             >
-              <span style={{ fontWeight: 'bold', color: '#0f172a' }}>{ins.name}</span>
-              <span style={{ fontSize: '0.9rem', color: '#64748b' }}>
-                <span style={{ color: '#2563eb', fontWeight: 'bold' }}>{ins.rank}</span> ·{' '}
-                {ins.role}
-              </span>
-            </li>
-          ))}
-        </ul>
+              {group.role}
+            </h3>
+            <ul
+              style={{
+                listStyle: 'none',
+                margin: 0,
+                padding: 0,
+                border: '1px solid #e2e8f0',
+                borderRadius: '8px',
+                backgroundColor: '#fff',
+                overflow: 'hidden',
+              }}
+            >
+              {group.members.map((ins, idx) => (
+                <li
+                  key={ins.name}
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'baseline',
+                    gap: '12px',
+                    padding: '10px 16px',
+                    borderTop: idx === 0 ? 'none' : '1px solid #e2e8f0',
+                  }}
+                >
+                  <span style={{ fontWeight: 'bold', color: '#0f172a' }}>{ins.name}</span>
+                  <span style={{ fontSize: '0.9rem', color: '#2563eb', fontWeight: 'bold' }}>
+                    {ins.rank}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </section>
 
       {/* EXEC TEAM */}
