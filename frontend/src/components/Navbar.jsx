@@ -23,7 +23,7 @@ export default function Navbar() {
           <img
             src="/logo.png"
             alt="UBC Kendo Club"
-            style={{ height: '64px', width: 'auto', display: 'block' }}
+            style={{ height: '48px', width: 'auto', display: 'block' }}
           />
         </Link>
         <div style={{ display: 'flex', gap: '14px', whiteSpace: 'nowrap' }}>
