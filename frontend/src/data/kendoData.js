@@ -19,6 +19,9 @@ export const PRACTICE_SCHEDULE = [
   },
 ];
 
+export const CALENDAR_EMBED_URL =
+  'https://calendar.google.com/calendar/embed?src=d784e7888bfa547551466bf211f605133eafccd7be57963b0a202456e6cb8dca%40group.calendar.google.com&ctz=America%2FVancouver&mode=AGENDA&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&showNav=0&showDate=0';
+
 export const INSTRUCTORS = [
   { name: 'Tsuyoshi Hamanaka', rank: '6 Dan Renshi', role: 'Head Sensei' },
   { name: 'Joon Young Suk', rank: '5 Dan', role: 'UBC Sensei' },

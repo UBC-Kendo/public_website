@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {
   LOCATIONS,
   PRACTICE_SCHEDULE,
+  CALENDAR_EMBED_URL,
   EXEC_TERM,
   EXEC_TEAM,
   INSTRUCTORS,
@@ -161,12 +162,26 @@ export default function Home() {
                 borderRadius: '8px',
               }}
             >
-              <p style={{ margin: 0, fontSize: '0.95rem', color: '#991b1b', fontWeight: '500' }}>
+              <p style={{ margin: 0, fontSize: '0.95rem', color: '#92400e', fontWeight: '500' }}>
                 <strong>Check the Mailing List:</strong> Location may vary from one week to another
-                between the Nest and Asian Centre. Always check the latest mailing list email before
-                heading out.
+                between the Nest and Asian Centre. Always check the latest mailing list email or 
+                Instagram story before heading out.
               </p>
             </div>
+            <br></br>
+            {/* CALENDAR EMBED */}
+            {CALENDAR_EMBED_URL && (
+              <details style={{ marginBottom: '24px' }}>
+                <summary style={{ cursor: 'pointer', fontWeight: 'bold', color: '#0f172a' }}>
+                  View upcoming practices
+                </summary>
+                <iframe
+                  src={CALENDAR_EMBED_URL}
+                  title="UBC Kendo practice calendar"
+                  style={{ width: '100%', height: '300px', border: 0, marginTop: '12px' }}
+                ></iframe>
+              </details>
+            )}
           </div>
         </div>
       </section>
