@@ -26,7 +26,7 @@ export default function Home() {
           textAlign: 'center',
         }}
       >
-        <h1 style={{ fontSize: '3rem', margin: '0 0 10px 0' }}>UBC KENDO CLUB</h1>
+        <h1 style={{ fontSize: 'clamp(2rem, 8vw, 3rem)', margin: '0 0 10px 0' }}>UBC KENDO CLUB</h1>
         <p style={{ fontSize: '1.2rem', color: '#94a3b8', margin: '0 0 20px 0' }}>
           Official Martial Arts Club at the University of British Columbia • Est. 1978
         </p>
