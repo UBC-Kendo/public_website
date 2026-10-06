@@ -3,43 +3,19 @@ import { EVENT_PAGE_TITLE } from '../data/kendoData';
 
 export default function Navbar() {
   return (
-    <nav
-      style={{
-        backgroundColor: '#0f172a',
-        padding: '16px 20px',
-        borderBottom: '1px solid #1e293b',
-      }}
-    >
-      <div
-        style={{
-          maxWidth: '1000px',
-          margin: '0 auto',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
-      >
-        <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
-          <img
-            src="/logo.png"
-            alt="UBC Kendo Club"
-            style={{ height: '48px', width: 'auto', display: 'block' }}
-          />
+    <nav className="navbar">
+      <div className="navbar__inner">
+        <Link to="/" className="navbar__brand">
+          <img src="/logo.png" alt="UBC Kendo Club" className="navbar__logo" />
         </Link>
-        <div style={{ display: 'flex', gap: '14px', whiteSpace: 'nowrap' }}>
-          <Link to="/" style={{ color: '#94a3b8', textDecoration: 'none', fontWeight: '500' }}>
+        <div className="navbar__links">
+          <Link to="/" className="navbar__link">
             Home
           </Link>
-          <Link
-            to="/events"
-            style={{ color: '#94a3b8', textDecoration: 'none', fontWeight: '500' }}
-          >
+          <Link to="/events" className="navbar__link">
             {EVENT_PAGE_TITLE}
           </Link>
-          <Link
-            to="/contact"
-            style={{ color: '#94a3b8', textDecoration: 'none', fontWeight: '500' }}
-          >
+          <Link to="/contact" className="navbar__link">
             Contact Us
           </Link>
           {/* INSTAGRAM LINK */}
@@ -48,12 +24,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="UBC Kendo Instagram"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              color: '#94a3b8',
-              transition: 'color 0.2s',
-            }}
+            className="navbar__social-link"
           >
             <svg
               width="20"

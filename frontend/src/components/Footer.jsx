@@ -3,34 +3,12 @@ import { EVENT_PAGE_TITLE, LOCATIONS } from '../data/kendoData';
 
 export default function Footer() {
   return (
-    <footer
-      style={{
-        backgroundColor: '#0f172a',
-        color: '#94a3b8',
-        padding: '48px 20px 24px',
-        borderTop: '1px solid #1e293b',
-        marginTop: '80px',
-        fontFamily: 'sans-serif',
-      }}
-    >
-      <div
-        style={{
-          maxWidth: '1000px',
-          margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-          gap: '32px',
-          marginBottom: '40px',
-        }}
-      >
+    <footer className="footer">
+      <div className="footer__inner">
         {/* BRAND / ABOUT */}
         <div>
-          <h3
-            style={{ color: '#fff', fontSize: '1.1rem', margin: '0 0 12px 0', fontWeight: 'bold' }}
-          >
-            UBC Kendo Club
-          </h3>
-          <p style={{ fontSize: '0.9rem', lineHeight: '1.6', margin: 0 }}>
+          <h3 className="footer__brand-title">UBC Kendo Club</h3>
+          <p className="footer__brand-text">
             Official University of British Columbia Kendo Club, established in 1978. Dedicated to
             practicing traditional Japanese kendo in Vancouver, BC.
           </p>
@@ -38,40 +16,20 @@ export default function Footer() {
 
         {/* QUICK LINKS */}
         <div>
-          <h4
-            style={{
-              color: '#fff',
-              fontSize: '0.95rem',
-              margin: '0 0 12px 0',
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em',
-            }}
-          >
-            Navigation
-          </h4>
-          <ul
-            style={{
-              listStyle: 'none',
-              padding: 0,
-              margin: 0,
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '8px',
-              fontSize: '0.9rem',
-            }}
-          >
+          <h4 className="footer__heading">Navigation</h4>
+          <ul className="footer__nav-list">
             <li>
-              <Link to="/" style={{ color: '#94a3b8', textDecoration: 'none' }}>
+              <Link to="/" className="footer__link">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/events" style={{ color: '#94a3b8', textDecoration: 'none' }}>
+              <Link to="/events" className="footer__link">
                 {EVENT_PAGE_TITLE}
               </Link>
             </li>
             <li>
-              <Link to="/contact" style={{ color: '#94a3b8', textDecoration: 'none' }}>
+              <Link to="/contact" className="footer__link">
                 Contact Us
               </Link>
             </li>
@@ -80,35 +38,15 @@ export default function Footer() {
 
         {/* PRACTICE LOCATIONS */}
         <div>
-          <h4
-            style={{
-              color: '#fff',
-              fontSize: '0.95rem',
-              margin: '0 0 12px 0',
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em',
-            }}
-          >
-            Practice Venues
-          </h4>
-          <ul
-            style={{
-              listStyle: 'none',
-              padding: 0,
-              margin: '0 0 8px 0',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '8px',
-              fontSize: '0.9rem',
-            }}
-          >
+          <h4 className="footer__heading">Practice Venues</h4>
+          <ul className="footer__locations">
             {LOCATIONS.map((loc, idx) => (
-              <li key={idx} style={{ lineHeight: '1.4' }}>
-                <span style={{ color: '#cbd5e1' }}>{loc.name}</span>
+              <li key={idx} className="footer__location">
+                <span className="footer__location-name">{loc.name}</span>
               </li>
             ))}
           </ul>
-          <p style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: '1.5', margin: 0 }}>
+          <p className="footer__address">
             University of British Columbia
             <br />
             Vancouver, BC V6T 1Z1
@@ -117,31 +55,14 @@ export default function Footer() {
 
         {/* SOCIAL & CONTACT */}
         <div>
-          <h4
-            style={{
-              color: '#fff',
-              fontSize: '0.95rem',
-              margin: '0 0 12px 0',
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em',
-            }}
-          >
-            Connect
-          </h4>
-          <div style={{ display: 'flex', gap: '16px', alignItems: 'center', marginBottom: '12px' }}>
+          <h4 className="footer__heading">Connect</h4>
+          <div className="footer__social">
             <a
               href="https://instagram.com/ubckendo"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              style={{
-                color: '#94a3b8',
-                textDecoration: 'none',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '6px',
-                fontSize: '0.9rem',
-              }}
+              className="footer__social-link"
             >
               <svg
                 width="18"
@@ -160,11 +81,8 @@ export default function Footer() {
               @ubckendo
             </a>
           </div>
-          <p style={{ fontSize: '0.9rem', margin: 0 }}>
-            <a
-              href="mailto:ubckendo@gmail.com"
-              style={{ color: '#94a3b8', textDecoration: 'none' }}
-            >
+          <p className="footer__email">
+            <a href="mailto:ubckendo@gmail.com" className="footer__email-link">
               ubckendo@gmail.com
             </a>
           </p>
@@ -172,17 +90,8 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM COPYRIGHT BAR */}
-      <div
-        style={{
-          maxWidth: '1000px',
-          margin: '0 auto',
-          paddingTop: '24px',
-          borderTop: '1px solid #1e293b',
-          textAlign: 'center',
-          fontSize: '0.85rem',
-        }}
-      >
-        <p style={{ margin: 0 }}>
+      <div className="footer__bottom">
+        <p className="footer__bottom-text">
           © {new Date().getFullYear()} UBC Kendo Club. All rights reserved.
         </p>
       </div>
