@@ -693,6 +693,18 @@ body {
     flex-direction: row;
     text-align: left;
   }
+
+  .home__exec-card:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+}
+
+@media (max-width: 480px) {
+  .home__exec-photo {
+    width: 96px;
+    height: 96px;
+  }
 }
 
 .home__faq {
