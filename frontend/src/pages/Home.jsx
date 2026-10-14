@@ -27,53 +27,45 @@ export default function Home() {
     <div style={{ fontFamily: 'sans-serif', color: '#1a1a1a', lineHeight: '1.6' }}>
       {/* HERO SECTION */}
       <section className="home__hero">
-        <h1 className="home__hero-title">UBC KENDO CLUB</h1>
-        <p className="home__hero-subtitle">
-          Official Martial Arts Club at the University of British Columbia • Est. 1978
-        </p>
+        <img src="/hero-bg.png" alt="" className="home__hero-bg" />
+        <img src="/UBCKendo_LogoTransparent.png" alt="UBC Kendo Club" className="home__hero-logo" />
       </section>
 
       {/* ABOUT SECTION */}
       <section className="home__about">
-        <h2 className="home__about-title">ABOUT UBC KENDO CLUB</h2>
-        <p className="home__about-tag">EST. 1978</p>
-        <h3 className="home__about-subtitle">More than just a club</h3>
-        <p className="home__about-copy home__about-copy--top">
-          University of British Columbia Kendo Club is a student-led recreational martial art club.
-          Although we are mostly comprised of UBC students and alumni, we also welcome anyone
-          outside of UBC to join us and practice kendo with us.
-        </p>
-        <p className="home__about-copy">
-          We are here to teach our members the etiquette and skills in Kendo. As a member, you will
-          also have a chance to develop skills such as self-confidence, leadership, and teamwork.
-        </p>
+        <div className="home__about-inner">
+          <img
+            src="/UBCKendo_LogoTransparent.png"
+            alt=""
+            aria-hidden="true"
+            className="home__about-overlay"
+          />
+          <img src="/about.jpg" alt="UBC Kendo Club members" className="home__about-photo" />
+          <div className="home__about-content">
+            <h2 className="home__about-title">ABOUT UBC KENDO CLUB</h2>
+            <p className="home__about-tag">EST. 1978</p>
+            <p className="home__about-copy home__about-copy--top">
+              University of British Columbia Kendo Club is a student-led recreational martial art
+              club. Although we are mostly comprised of UBC students and alumni, we also welcome
+              anyone outside of UBC to join us and practice kendo with us.
+            </p>
+            <p className="home__about-copy">
+              We are here to teach our members the etiquette and skills in Kendo. As a member, you
+              will also have a chance to develop skills such as self-confidence, leadership, and
+              teamwork.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* SCHEDULE & LOCATIONS */}
       <section id="schedule" className="home__schedule">
         <div className="home__schedule-inner">
-          <h2 className="home__schedule-title">Practice Schedule & Location</h2>
-          <div className="home__schedule-card">
-            {/* TIMES */}
-            <div className="home__schedule-times">
-              {PRACTICE_SCHEDULE.map((sched, idx) => (
-                <div key={idx}>
-                  <h3 className="home__schedule-heading">Practice Hours ({sched.day})</h3>
-                  <ul className="home__schedule-list">
-                    <li>
-                      <strong>Beginners:</strong> {sched.beginner}
-                    </li>
-                    <li>
-                      <strong>Seniors / Bogu:</strong> {sched.senior}
-                    </li>
-                  </ul>
-                </div>
-              ))}
-            </div>
+          <h2 className="home__schedule-title">{EXEC_TERM} Practice Schedule:</h2>
 
-            {/* LOCATIONS WITH MAP LINKS */}
+          <div className="home__schedule-card">
             <div className="home__locations-wrap">
-              <h3 className="home__locations-title">📍 Location </h3>
+              <h3 className="home__locations-title">Location: </h3>
               <div className="home__location-grid">
                 {LOCATIONS.map((loc, idx) => (
                   <div key={idx} className="home__location-card">
@@ -94,7 +86,14 @@ export default function Home() {
               </div>
             </div>
 
-            {/* MAILING LIST NOTICE */}
+            {PRACTICE_SCHEDULE.map((sched, idx) => (
+              <div key={idx} className="home__schedule-block">
+                <p className="home__schedule-day">{sched.day}</p>
+                <p className="home__schedule-time">Beginners: {sched.beginner}</p>
+                <p className="home__schedule-time">Seniors / Bogu: {sched.senior}</p>
+              </div>
+            ))}
+
             <div className="home__mailing-notice">
               <p className="home__mailing-text">
                 <strong>Check the Mailing List:</strong> Location may vary from one week to another
@@ -102,7 +101,7 @@ export default function Home() {
                 Instagram story before heading out.
               </p>
             </div>
-            {/* CALENDAR EMBED */}
+
             {CALENDAR_EMBED_URL && (
               <details className="home__calendar-details">
                 <summary className="home__calendar-summary">View upcoming practices</summary>
@@ -118,44 +117,41 @@ export default function Home() {
       </section>
 
       {/* INSTRUCTORS */}
-      <section className="home__staff-section">
-        <h2 className="home__staff-title">Instructors</h2>
-        {instructorGroups.map((group) => (
-          <div key={group.role} className="home__staff-group">
-            <h3 className="home__staff-label">{group.role}</h3>
-            <ul className="home__staff-list">
-              {group.members.map((ins, idx) => (
-                <li
-                  key={ins.name}
-                  className={
-                    idx === 0 ? 'home__staff-item' : 'home__staff-item home__staff-item--bordered'
-                  }
-                >
-                  <span className="home__staff-name">{ins.name}</span>
-                  <span className="home__staff-rank">{ins.rank}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <section className="home__instructors">
+        <div className="home__instructors-inner">
+          <h2 className="home__instructors-title">CLUB INSTRUCTORS</h2>
+          {instructorGroups.map((group) => (
+            <div key={group.role} className="home__instructors-group">
+              <h3 className="home__instructors-role">{group.role}</h3>
+              <ul className="home__instructors-list">
+                {group.members.map((ins) => (
+                  <li key={ins.name}>
+                    {ins.name} ({ins.rank})
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* EXEC TEAM */}
-      <section className="home__staff-section">
-        <h2 className="home__staff-title">Executive Team {EXEC_TERM}</h2>
-        <ul className="home__staff-list">
-          {EXEC_TEAM.map((exec, idx) => (
-            <li
-              key={idx}
-              className={
-                idx === 0 ? 'home__staff-item' : 'home__staff-item home__staff-item--bordered'
-              }
-            >
-              <span className="home__staff-name">{exec.name}</span>
-              <span className="home__staff-rank">{exec.role}</span>
-            </li>
-          ))}
-        </ul>
+      <section className="home__exec">
+        <div className="home__exec-inner">
+          <h2 className="home__exec-title">Exec Team {EXEC_TERM}</h2>
+          <div className="home__exec-grid">
+            {EXEC_TEAM.map((exec) => (
+              <div key={exec.name} className="home__exec-card">
+                <img src={exec.photo} alt="" className="home__exec-photo" />
+                <div>
+                  <h3 className="home__exec-name">{exec.name}</h3>
+                  <p className="home__exec-role">{exec.role}</p>
+                  <p className="home__exec-bio">{exec.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* FAQ SECTION */}

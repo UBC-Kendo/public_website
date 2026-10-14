@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { EVENT_PAGE_TITLE, LOCATIONS } from '../data/kendoData';
+import { EVENT_PAGES, LOCATIONS } from '../data/kendoData';
 
 export default function Footer() {
   return (
@@ -23,11 +23,13 @@ export default function Footer() {
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="/events" className="footer__link">
-                {EVENT_PAGE_TITLE}
-              </Link>
-            </li>
+            {EVENT_PAGES.map((page) => (
+              <li key={page.path}>
+                <Link to={page.path} className="footer__link">
+                  {page.label}
+                </Link>
+              </li>
+            ))}
             <li>
               <Link to="/contact" className="footer__link">
                 Contact Us

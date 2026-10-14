@@ -1,8 +1,9 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
-import Events from './pages/Events';
+import Taikai from './pages/Taikai';
+import Social from './pages/Social';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
@@ -15,7 +16,9 @@ export default function App() {
       <main style={{ flex: 1 }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/events" element={<Navigate to="/events/taikai" replace />} />
+          <Route path="/events/taikai" element={<Taikai />} />
+          <Route path="/events/social" element={<Social />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -40,22 +40,38 @@ export const EXEC_TEAM = [
   {
     role: 'President',
     name: 'William Zhu',
+    photo: '/execs/placeholder.jpg',
+    bio: `Hi, I'm William`,
   },
   {
     role: 'Vice President',
     name: 'Yuma Ogasawara',
+    photo: '/execs/placeholder.jpg',
+    bio: `Hi, I'm William`,
   },
   {
     role: 'Treasurer',
     name: 'Tim Wang',
+    photo: '/execs/placeholder.jpg',
+    bio: `Hi, I'm William`,
   },
   {
     role: 'Secretary',
     name: 'Arthur Wong',
+    photo: '/execs/placeholder.jpg',
+    bio: `Hi, I'm William`,
   },
   {
-    role: 'Publicity Coordinators',
-    name: 'Brian Li & Jonathan Eng',
+    role: 'Publicity Coordinator',
+    name: 'Brian Li',
+    photo: '/execs/placeholder.jpg',
+    bio: `Hi, I'm William`,
+  },
+  {
+    role: 'Publicity Coordinator',
+    name: 'Jonathan Eng',
+    photo: '/execs/placeholder.jpg',
+    bio: `Hi, I'm William`,
   },
 ];
 
@@ -84,7 +100,10 @@ export const FAQS = [
   },
 ];
 
-export const EVENT_PAGE_TITLE = 'Taikai';
+export const EVENT_PAGES = [
+  { label: 'Taikai', path: '/events/taikai' },
+  { label: 'Social', path: '/events/social' },
+];
 
 // NOT FULLY DONE
 export const EVENT_DATA = {

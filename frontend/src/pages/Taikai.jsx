@@ -1,11 +1,11 @@
-import { EVENT_PAGE_TITLE, EVENT_DATA } from '../data/kendoData';
+import { EVENT_DATA } from '../data/kendoData';
 
-export default function Events() {
+export default function Taikai() {
   const { hasActiveEvent, title, date, location, description, bracketUrl } = EVENT_DATA;
 
   return (
     <div className="events">
-      <h1 className="events__title">{EVENT_PAGE_TITLE}</h1>
+      <h1 className="events__title">Taikai</h1>
 
       {hasActiveEvent ? (
         <div className="events__card events__card--active">
