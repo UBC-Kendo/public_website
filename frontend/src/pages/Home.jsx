@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import {
   LOCATIONS,
   PRACTICE_SCHEDULE,
@@ -57,50 +57,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SCHEDULE & LOCATIONS */}
+      {/* SCHEDULE */}
       <section id="schedule" className="home__schedule">
         <div className="home__schedule-inner">
-          <h2 className="home__schedule-title">{EXEC_TERM} Practice Schedule:</h2>
-
-          <div className="home__schedule-card">
-            <div className="home__locations-wrap">
-              <h3 className="home__locations-title">Location: </h3>
-              <div className="home__location-grid">
-                {LOCATIONS.map((loc, idx) => (
-                  <div key={idx} className="home__location-card">
-                    <div>
-                      <strong className="home__location-name">{loc.name}</strong>
-                      <p className="home__location-address">{loc.address}</p>
-                    </div>
+          <h2 className="home__schedule-title">Practice Schedule</h2>
+          {PRACTICE_SCHEDULE.map((sched, idx) => (
+            <div key={idx}>
+              <p className="home__schedule-text">
+                {sched.term} Schedule:
+                <br />
+                Location:{' '}
+                {sched.locations.map((loc, i) => (
+                  <Fragment key={loc.name}>
+                    {i > 0 && ', '}
                     <a
                       href={loc.mapUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="home__map-link"
+                      className="home__schedule-link"
                     >
-                      Open in Google Maps ↗
+                      {loc.name}
                     </a>
-                  </div>
+                  </Fragment>
                 ))}
-              </div>
-            </div>
-
-            {PRACTICE_SCHEDULE.map((sched, idx) => (
-              <div key={idx} className="home__schedule-block">
-                <p className="home__schedule-day">{sched.day}</p>
-                <p className="home__schedule-time">Beginners: {sched.beginner}</p>
-                <p className="home__schedule-time">Seniors / Bogu: {sched.senior}</p>
-              </div>
-            ))}
-
-            <div className="home__mailing-notice">
-              <p className="home__mailing-text">
-                <strong>Check the Mailing List:</strong> Location may vary from one week to another
-                between the Nest and Asian Centre. Always check the latest mailing list email or
-                Instagram story before heading out.
+                <br />
+                {sched.day}:
+              </p>
+              <p className="home__schedule-text">
+                Beginner: {sched.beginner}
+                <br />
+                Seniors: {sched.senior}
               </p>
             </div>
-          </div>
+          ))}
+          <p className="home__schedule-text">
+            Time and location may change. Please check your email for an up-to-date schedule.
+          </p>
         </div>
       </section>
 

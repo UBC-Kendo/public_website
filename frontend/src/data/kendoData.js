@@ -13,9 +13,14 @@ export const LOCATIONS = [
 
 export const PRACTICE_SCHEDULE = [
   {
-    day: 'Mondays & Thursdays',
-    beginner: '7:00 PM - 8:00 PM',
-    senior: '8:00 PM - 10:00 PM',
+    term: 'Winter Semester 2026/27',
+    locations: [
+      { name: 'AMS Student Nest', mapUrl: LOCATIONS[0].mapUrl },
+      { name: 'Asian Centre', mapUrl: LOCATIONS[1].mapUrl },
+    ],
+    day: 'Every Monday and Thursday',
+    beginner: '7:00pm - 8:00pm',
+    senior: '8:00pm - 10:00pm',
   },
 ];
 

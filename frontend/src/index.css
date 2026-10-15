@@ -471,22 +471,36 @@ body {
 .home__schedule {
   background-color: var(--color-navy);
   background-image:
-    linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('/schedule-bg.jpg');
+    linear-gradient(rgba(24, 45, 92, 0.7), rgba(24, 45, 92, 0.7)), url('/practice-bg.png');
   background-size: cover;
-  background-position: center;
+  background-position: center 80%;
   color: var(--color-white);
   padding: 80px 20px;
   text-align: center;
 }
 
 .home__schedule-inner {
-  max-width: 700px;
+  max-width: 520px;
   margin: 0 auto;
 }
 
 .home__schedule-title {
-  margin: 0 0 8px;
+  margin: 0 0 32px;
   text-transform: uppercase;
+}
+
+.home__schedule-text {
+  margin: 0 0 24px;
+  font-size: 1.35rem;
+}
+
+.home__schedule-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.home__schedule-link:hover {
+  opacity: 0.8;
 }
 
 .home__schedule-term {
