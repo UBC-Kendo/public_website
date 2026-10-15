@@ -148,6 +148,7 @@ body {
 
   .navbar__logo {
     height: 1.4em;
+    margin-right: -4px;
   }
 
   .navbar__brand-text {
