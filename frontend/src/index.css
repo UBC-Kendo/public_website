@@ -368,6 +368,7 @@ body {
 
 .home__hero {
   position: relative;
+  width: 100%;
   aspect-ratio: 16 / 6;
   min-height: 250px;
   overflow: hidden;
@@ -383,6 +384,7 @@ body {
 }
 
 .home__hero-logo {
+  outline: 2px solid red;
   position: absolute;
   top: 50%;
   left: 50%;
