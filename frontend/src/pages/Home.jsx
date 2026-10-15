@@ -2,7 +2,6 @@ import { useState } from 'react';
 import {
   LOCATIONS,
   PRACTICE_SCHEDULE,
-  CALENDAR_EMBED_URL,
   EXEC_TERM,
   EXEC_TEAM,
   INSTRUCTORS,
@@ -101,17 +100,6 @@ export default function Home() {
                 Instagram story before heading out.
               </p>
             </div>
-
-            {CALENDAR_EMBED_URL && (
-              <details className="home__calendar-details">
-                <summary className="home__calendar-summary">View upcoming practices</summary>
-                <iframe
-                  src={CALENDAR_EMBED_URL}
-                  title="UBC Kendo practice calendar"
-                  className="home__calendar-iframe"
-                ></iframe>
-              </details>
-            )}
           </div>
         </div>
       </section>
