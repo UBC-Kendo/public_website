@@ -1,6 +1,5 @@
 import { Fragment, useState } from 'react';
 import {
-  LOCATIONS,
   PRACTICE_SCHEDULE,
   EXEC_TERM,
   EXEC_TEAM,
