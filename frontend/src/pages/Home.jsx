@@ -16,7 +16,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{ fontFamily: 'sans-serif', color: '#1a1a1a', lineHeight: '1.6' }}>
+    <div style={{color: '#1a1a1a', lineHeight: '1.6' }}>
       {/* HERO SECTION */}
       <section className="home__hero">
         <img src="/hero-bg.png" alt="" className="home__hero-bg" />
