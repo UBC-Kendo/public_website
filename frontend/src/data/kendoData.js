@@ -5,7 +5,7 @@ export const LOCATIONS = [
     mapUrl: 'https://maps.google.com/?q=AMS+Student+Nest+UBC',
   },
   {
-    name: 'UBC Asian Centre',
+    name: 'Asian Centre',
     address: '1871 West Mall, Vancouver, BC V6T 1Z2',
     mapUrl: 'https://maps.google.com/?q=UBC+Asian+Centre',
   },
