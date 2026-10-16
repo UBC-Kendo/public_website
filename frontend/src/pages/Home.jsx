@@ -16,7 +16,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{color: '#1a1a1a', lineHeight: '1.6' }}>
+    <div style={{ color: '#1a1a1a', lineHeight: '1.6' }}>
       {/* HERO SECTION */}
       <section className="home__hero">
         <img src="/hero-bg.png" alt="" className="home__hero-bg" />
@@ -53,6 +53,12 @@ export default function Home() {
       {/* SCHEDULE */}
       <section id="schedule" className="home__schedule">
         <div className="home__schedule-inner">
+            <img
+          src="/UBCKendo_LogoTransparent.png"
+          alt=""
+          aria-hidden="true"
+          className="home__schedule-overlay"
+        />
           <h2 className="home__schedule-title">Practice Schedule</h2>
           {PRACTICE_SCHEDULE.map((sched, idx) => (
             <div key={idx}>
