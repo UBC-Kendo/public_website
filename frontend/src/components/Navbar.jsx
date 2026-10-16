@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className="navbar__inner">
         <Link to="/" className="navbar__brand">
           <img src="/logo.png" className="navbar__logo" />
-          <span className="navbar__brand-text">UBC Kendo</span>
+          <span className="navbar__brand-text">UBC KENDO</span>
         </Link>
         <div className="navbar__links">
           <Link to="/" className="navbar__link">
