@@ -656,7 +656,7 @@ body {
   background-image: url('/piyoshi_bg.png');
   background-blend-mode: multiply;
   color: var(--color-white);
-  padding: 60px 20px;
+  padding: 60px 20px 100px;
 }
 
 .home__exec-inner {

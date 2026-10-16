@@ -142,18 +142,24 @@ export default function Home() {
               const isOpen = openFaq === idx;
               return (
                 <div key={idx} className="home__faq-item">
-                  <button onClick={() => toggleFaq(idx)} aria-expanded={isOpen} className="home__faq-button">
-  <span>{faq.q}</span>
-  <span className={`home__faq-toggle${isOpen ? ' home__faq-toggle--open' : ''}`}>+</span>
-</button>
-<div
-  className={`home__faq-answer-wrap${isOpen ? ' home__faq-answer-wrap--open' : ''}`}
-  aria-hidden={!isOpen}
->
-  <div className="home__faq-answer">
-    <p className="home__faq-answer-text">{faq.a}</p>
-  </div>
-</div>
+                  <button
+                    onClick={() => toggleFaq(idx)}
+                    aria-expanded={isOpen}
+                    className="home__faq-button"
+                  >
+                    <span>{faq.q}</span>
+                    <span className={`home__faq-toggle${isOpen ? ' home__faq-toggle--open' : ''}`}>
+                      +
+                    </span>
+                  </button>
+                  <div
+                    className={`home__faq-answer-wrap${isOpen ? ' home__faq-answer-wrap--open' : ''}`}
+                    aria-hidden={!isOpen}
+                  >
+                    <div className="home__faq-answer">
+                      <p className="home__faq-answer-text">{faq.a}</p>
+                    </div>
+                  </div>
                 </div>
               );
             })}
