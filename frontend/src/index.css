@@ -653,8 +653,8 @@ body {
 
 .home__exec {
   background-color: #30518b;
-  background-image: url('/piyoshi_bg.png');
-  background-blend-mode: multiply;
+  background-image: 
+    linear-gradient(rgba(24, 45, 92, 0.65), rgba(24, 45, 92, 0.65)), url('/piyoshi-bg.png');
   color: var(--color-white);
   padding: 60px 20px 100px;
 }
