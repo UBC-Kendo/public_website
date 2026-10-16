@@ -169,10 +169,9 @@ body {
 }
 
 .footer {
-  background-color: var(--color-navy);
+  background-color: var(--color-navy-deep);
   color: var(--color-muted);
   padding: 48px 20px 24px;
-  border-top: 1px solid var(--color-navy-deep);
   margin-top: 80px;
 }
 
@@ -739,34 +738,30 @@ body {
 }
 
 .home__faq {
-  background-color: var(--color-surface);
+  background-color: var(--color-navy);
+  color: var(--color-white);
   padding: 60px 20px;
-}
-
-.home__faq-inner {
-  max-width: 800px;
-  margin: 0 auto;
+  margin-bottom: -80px;
 }
 
 .home__faq-title {
   text-align: center;
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  margin: 0 0 32px;
 }
 
 .home__faq-list {
   display: grid;
-  gap: 12px;
 }
 
 .home__faq-item {
-  background-color: var(--color-white);
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  overflow: hidden;
+  border-bottom: 1px solid var(--color-muted);
 }
 
 .home__faq-button {
   width: 100%;
-  padding: 16px 20px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -775,23 +770,44 @@ body {
   text-align: left;
   font-size: 1.05rem;
   font-weight: bold;
-  color: var(--color-navy);
+  color: var(--color-white);
   cursor: pointer;
+}
+
+.home__faq-answer-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.home__faq-answer-wrap--open {
+  grid-template-rows: 1fr;
+}
+
+.home__faq-answer {
+  overflow: hidden;
+  color: var(--color-border);
+}
+
+.home__faq-answer-text {
+  margin: 0;
+  padding-bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.home__faq-answer-wrap--open .home__faq-answer-text {
+  opacity: 1;
 }
 
 .home__faq-toggle {
   font-size: 1.2rem;
   margin-left: 10px;
+  transition: transform 0.3s ease;
 }
 
-.home__faq-answer {
-  padding: 0 20px 16px 20px;
-  color: var(--color-subtle);
-  border-top: 1px solid var(--color-surface-alt);
-}
-
-.home__faq-answer-text {
-  margin: 12px 0 0;
+.home__faq-toggle--open {
+  transform: rotate(45deg);
 }
 
 .events {

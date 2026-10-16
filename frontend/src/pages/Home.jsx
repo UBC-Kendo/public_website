@@ -53,12 +53,12 @@ export default function Home() {
       {/* SCHEDULE */}
       <section id="schedule" className="home__schedule">
         <div className="home__schedule-inner">
-            <img
-          src="/UBCKendo_LogoTransparent.png"
-          alt=""
-          aria-hidden="true"
-          className="home__schedule-overlay"
-        />
+          <img
+            src="/UBCKendo_LogoTransparent.png"
+            alt=""
+            aria-hidden="true"
+            className="home__schedule-overlay"
+          />
           <h2 className="home__schedule-title">Practice Schedule</h2>
           {PRACTICE_SCHEDULE.map((sched, idx) => (
             <div key={idx}>
@@ -136,25 +136,24 @@ export default function Home() {
       {/* FAQ SECTION */}
       <section className="home__faq">
         <div className="home__faq-inner">
-          <h2 className="home__faq-title">Frequently Asked Questions</h2>
+          <h2 className="home__faq-title">FAQ</h2>
           <div className="home__faq-list">
             {FAQS.map((faq, idx) => {
               const isOpen = openFaq === idx;
               return (
                 <div key={idx} className="home__faq-item">
-                  <button
-                    onClick={() => toggleFaq(idx)}
-                    aria-expanded={isOpen}
-                    className="home__faq-button"
-                  >
-                    <span>{faq.q}</span>
-                    <span className="home__faq-toggle">{isOpen ? '−' : '+'}</span>
-                  </button>
-                  {isOpen && (
-                    <div className="home__faq-answer">
-                      <p className="home__faq-answer-text">{faq.a}</p>
-                    </div>
-                  )}
+                  <button onClick={() => toggleFaq(idx)} aria-expanded={isOpen} className="home__faq-button">
+  <span>{faq.q}</span>
+  <span className={`home__faq-toggle${isOpen ? ' home__faq-toggle--open' : ''}`}>+</span>
+</button>
+<div
+  className={`home__faq-answer-wrap${isOpen ? ' home__faq-answer-wrap--open' : ''}`}
+  aria-hidden={!isOpen}
+>
+  <div className="home__faq-answer">
+    <p className="home__faq-answer-text">{faq.a}</p>
+  </div>
+</div>
                 </div>
               );
             })}
