@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 import { EVENT_PAGES } from '../data/kendoData';
 
 export default function Navbar() {

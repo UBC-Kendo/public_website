@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react';
+import './Home.css';
 import { PRACTICE_SCHEDULE, EXEC_TERM, EXEC_TEAM, INSTRUCTORS, FAQS } from '../data/kendoData';
 
 export default function Home() {

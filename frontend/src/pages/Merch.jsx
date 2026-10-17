@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './Merch.css';
 import { MERCH_ITEMS } from '../data/kendoData';
 
 export default function Merch() {

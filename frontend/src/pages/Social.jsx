@@ -1,3 +1,5 @@
+import './Events.css';
+
 export default function Social() {
   return (
     <div className="events">

@@ -1,3 +1,4 @@
+import './Events.css';
 import { EVENT_DATA } from '../data/kendoData';
 
 export default function Taikai() {

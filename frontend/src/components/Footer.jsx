@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './Footer.css';
 import { EVENT_PAGES, LOCATIONS } from '../data/kendoData';
 
 export default function Footer() {

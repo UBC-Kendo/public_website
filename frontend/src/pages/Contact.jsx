@@ -1,4 +1,5 @@
 import { useForm, ValidationError } from '@formspree/react';
+import './Contact.css';
 
 export default function Contact() {
   const [state, handleSubmit] = useForm('maeqyzqj'); // TODO: CHANGE TO ACTUAL EMAIL LINK
