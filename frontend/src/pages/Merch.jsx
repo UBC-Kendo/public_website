@@ -17,7 +17,7 @@ export default function Merch() {
           <Link to="/contact" className="merch__link">
             Contact us
           </Link>{' '}
-          and we will get back to you.
+          and we will get back to you shortly!
         </p>
       </div>
     </div>
