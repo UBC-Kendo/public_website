@@ -1,0 +1,20 @@
+.not-found {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.not-found__title {
+  color: var(--color-navy);
+}
+
+.not-found__text {
+  color: var(--color-text-soft);
+}
+
+.not-found__link {
+  color: var(--color-accent);
+  font-weight: bold;
+  text-decoration: none;
+}
