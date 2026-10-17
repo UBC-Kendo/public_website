@@ -140,31 +140,110 @@ body {
   text-decoration: none;
 }
 
+.navbar__toggle {
+  display: none;
+}
+
 @media (max-width: 700px) {
-  .navbar {
-    padding: 16px 12px;
+  .navbar__toggle {
+    display: none;
   }
 
-  .navbar__brand {
-    gap: 0;
-  }
+  @media (max-width: 700px) {
+    .navbar {
+      padding: 16px 12px;
+      position: relative;
+    }
 
-  .navbar__logo {
-    height: 36px;
-    margin-right: -4px;
-  }
+    .navbar__brand {
+      gap: 0;
+    }
 
-  .navbar__brand-text {
-    font-size: 1.1rem;
-  }
+    .navbar__logo {
+      height: 48px;
+    }
 
-  .navbar__links {
-    gap: 10px;
-  }
+    .navbar__brand-text {
+      font-size: 1.4rem;
+    }
 
-  .navbar__link,
-  .navbar__dropdown-item {
-    font-size: 1rem;
+    .navbar__toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 20px;
+      padding: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .navbar__toggle-bar {
+      display: block;
+      height: 2px;
+      background-color: var(--color-white);
+      border-radius: 1px;
+      transition:
+        transform 0.3s ease,
+        opacity 0.2s ease;
+    }
+
+    .navbar__toggle--open .navbar__toggle-bar:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    .navbar__toggle--open .navbar__toggle-bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .navbar__toggle--open .navbar__toggle-bar:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .navbar__links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 12px 20px;
+      background-color: var(--color-navy);
+      border-bottom: 1px solid var(--color-navy-deep);
+      visibility: hidden;
+      clip-path: inset(0 0 100% 0);
+      transition:
+        clip-path 0.3s ease,
+        visibility 0.3s;
+    }
+
+    .navbar__links--open {
+      visibility: visible;
+      clip-path: inset(0);
+    }
+
+    .navbar__link,
+    .navbar__dropdown-item {
+      font-size: 1rem;
+    }
+
+    .navbar__dropdown-menu {
+      position: static;
+      margin: 8px 0 0;
+      padding: 0 0 0 16px;
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+
+    .navbar__dropdown-item {
+      padding: 6px 0;
+      color: var(--color-white);
+      text-align: left;
+    }
   }
 }
 

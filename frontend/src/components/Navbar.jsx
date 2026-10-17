@@ -4,7 +4,13 @@ import { EVENT_PAGES } from '../data/kendoData';
 
 export default function Navbar() {
   const [eventsOpen, setEventsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const eventsRef = useRef(null);
+
+  const closeMenus = () => {
+    setMenuOpen(false);
+    setEventsOpen(false);
+  };
 
   useEffect(() => {
     if (!eventsOpen) return;
@@ -25,12 +31,23 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar__inner">
-        <Link to="/" className="navbar__brand">
+        <Link to="/" className="navbar__brand" onClick={closeMenus}>
           <img src="/logo.png" className="navbar__logo" />
           <span className="navbar__brand-text">UBC KENDO</span>
         </Link>
-        <div className="navbar__links">
-          <Link to="/" className="navbar__link">
+        <button
+          type="button"
+          className={`navbar__toggle${menuOpen ? ' navbar__toggle--open' : ''}`}
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span className="navbar__toggle-bar" />
+          <span className="navbar__toggle-bar" />
+          <span className="navbar__toggle-bar" />
+        </button>
+        <div className={`navbar__links${menuOpen ? ' navbar__links--open' : ''}`}>
+          <Link to="/" className="navbar__link" onClick={closeMenus}>
             Home
           </Link>
           <div className="navbar__dropdown" ref={eventsRef}>
@@ -46,11 +63,7 @@ export default function Navbar() {
               <ul className="navbar__dropdown-menu">
                 {EVENT_PAGES.map((page) => (
                   <li key={page.path}>
-                    <Link
-                      to={page.path}
-                      className="navbar__dropdown-item"
-                      onClick={() => setEventsOpen(false)}
-                    >
+                    <Link to={page.path} className="navbar__dropdown-item" onClick={closeMenus}>
                       {page.label}
                     </Link>
                   </li>
@@ -58,10 +71,10 @@ export default function Navbar() {
               </ul>
             )}
           </div>
-          <Link to="/merch" className="navbar__link">
+          <Link to="/merch" className="navbar__link" onClick={closeMenus}>
             Merch
           </Link>
-          <Link to="/contact" className="navbar__link">
+          <Link to="/contact" className="navbar__link" onClick={closeMenus}>
             Contact
           </Link>
           {/* INSTAGRAM LINK */}
