@@ -110,9 +110,15 @@ export const EVENT_PAGES = [
 // NOT FULLY DONE
 export const EVENT_DATA = {
   hasActiveEvent: false, // Toggle to true when a tournament/event is coming up
-  title: '2026 UBC Taikai',
-  date: 'October 10, 2026',
-  location: 'BCIT',
-  description: 'Join us for our annual club tournament featuring team matches.',
+  title: '2027 Intercollegiate Taikai',
+  date: 'January X, 2027',
+  location: 'TBD',
+  description: '',
   bracketUrl: '', // Optional
 };
+
+export const MERCH_ITEMS = [
+  { name: 'UBC Kendo water bottle', image: '/merch/bottle.png' },
+  { name: 'Kendo Monster sticker', image: '/merch/monster-sticker.png' },
+  { name: 'Piyoshi sticker', image: '/merch/piyoshi-sticker.png' },
+];

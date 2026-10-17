@@ -653,7 +653,7 @@ body {
 
 .home__exec {
   background-color: #30518b;
-  background-image: 
+  background-image:
     linear-gradient(rgba(24, 45, 92, 0.65), rgba(24, 45, 92, 0.65)), url('/piyoshi-bg.png');
   color: var(--color-white);
   padding: 60px 20px 100px;
@@ -917,4 +917,61 @@ body {
   color: var(--color-accent);
   font-weight: bold;
   text-decoration: none;
+}
+
+.merch {
+  background-color: #30518b;
+  background-image:
+    linear-gradient(rgba(24, 45, 92, 0.65), rgba(24, 45, 92, 0.65)), url('/piyoshi-bg.png');
+  color: var(--color-white);
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: -80px;
+}
+
+.merch__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.merch__title {
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  margin: 0 0 40px;
+}
+
+.merch__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.merch__item {
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+.merch__item:nth-child(odd) {
+  transform: rotate(-6deg);
+}
+
+.merch__item:nth-child(even) {
+  transform: rotate(5deg);
+}
+
+.merch__text {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.merch__link {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: underline;
 }

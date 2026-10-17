@@ -58,6 +58,9 @@ export default function Navbar() {
               </ul>
             )}
           </div>
+          <Link to="/merch" className="navbar__link">
+            Merch
+          </Link>
           <Link to="/contact" className="navbar__link">
             Contact
           </Link>

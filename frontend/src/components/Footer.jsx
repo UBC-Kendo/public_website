@@ -31,6 +31,11 @@ export default function Footer() {
               </li>
             ))}
             <li>
+              <Link to="/merch" className="footer__link">
+                Merch
+              </Link>
+            </li>
+            <li>
               <Link to="/contact" className="footer__link">
                 Contact Us
               </Link>

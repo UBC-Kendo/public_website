@@ -6,6 +6,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Taikai from './pages/Taikai';
 import Social from './pages/Social';
+import Merch from './pages/Merch';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/events" element={<Navigate to="/events/taikai" replace />} />
           <Route path="/events/taikai" element={<Taikai />} />
           <Route path="/events/social" element={<Social />} />
+          <Route path="/merch" element={<Merch />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
