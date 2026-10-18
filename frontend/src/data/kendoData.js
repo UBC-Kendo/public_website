@@ -100,6 +100,10 @@ export const FAQS = [
     q: 'Do I need to be a UBC student to join the club?',
     a: 'No, we are open to anyone who wishes to join and practice kendo. Email us at ubckendo@gmail.com for upcoming intake details!',
   },
+  {
+    q: 'If you have any more questions...',
+    a: 'Contact us at ubckendo@gmail.com or come visit us in person!',
+  }
 ];
 
 export const EVENT_PAGES = [
