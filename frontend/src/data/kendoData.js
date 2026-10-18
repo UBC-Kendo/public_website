@@ -103,11 +103,11 @@ export const FAQS = [
 ];
 
 export const EVENT_PAGES = [
-  { label: 'taikai', path: '/events/taikai' },
-  { label: 'social', path: '/events/social' },
+  { label: 'Taikai', path: '/events/taikai' },
+  { label: 'Social', path: '/events/social' },
 ];
 
-// NOT FULLY DONE
+// TODO: NOT FULLY DONE
 export const EVENT_DATA = {
   hasActiveEvent: false, // Toggle to true when a tournament/event is coming up
   title: '2027 Intercollegiate Taikai',
@@ -116,6 +116,12 @@ export const EVENT_DATA = {
   description: '',
   bracketUrl: '', // Optional
 };
+
+export const TAIKAI_EVENTS = [
+  { date: '2025-11-15', title: 'Example Taikai 1' },
+  { date: '2026-03-07', title: 'Example Taikai 2' },
+  { date: '2027-02-20', title: 'Example Taikai 3' },
+];
 
 export const MERCH_ITEMS = [
   { name: 'UBC Kendo water bottle', image: '/merch/bottle.png' },
