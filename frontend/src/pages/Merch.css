@@ -6,7 +6,7 @@
   padding: 60px 20px;
   text-align: center;
   overflow: hidden;
-  margin-bottom: -80px;
+  flex: 1;
 }
 
 .merch__inner {
