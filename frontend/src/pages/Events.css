@@ -1,12 +1,15 @@
 .events {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 0 20px;
+  padding: 60px max(20px, calc((100% - 800px) / 2)) 80px;
+  background-color: #30518b;
+  background-image:
+    linear-gradient(rgba(24, 45, 92, 0.65), rgba(24, 45, 92, 0.65)), url('/piyoshi-bg.png');
+  margin-bottom: -80px;
 }
 
 .events__title {
   text-align: center;
-  color: var(--color-navy);
+  text-transform: uppercase;
+  color: var(--color-white);
   margin-bottom: 24px;
 }
 

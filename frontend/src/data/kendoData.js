@@ -118,9 +118,14 @@ export const EVENT_DATA = {
 };
 
 export const TAIKAI_EVENTS = [
-  { date: '2025-11-15', title: 'Example Taikai 1' },
-  { date: '2026-03-07', title: 'Example Taikai 2' },
-  { date: '2027-02-20', title: 'Example Taikai 3' },
+  { date: '2026-01-24', title: 'Intercollegiate Taikai' },
+  { date: '2026-02-21', title: 'Steveston Taikai' },
+  { date: '2026-03-07', title: 'Sakura Taikai' },
+  { date: '2026-06-06', title: 'Vancouver Taikai' },
+  { date: '2026-08-07', title: 'CNKF Taikai' },
+  { date: '2026-10-10', title: 'UBC Taikai' },
+  { date: '2026-10-24', title: 'BCKF Taikai' },
+  { date: '2027-01-23', title: 'Intercollegiate Taikai'}
 ];
 
 export const MERCH_ITEMS = [
