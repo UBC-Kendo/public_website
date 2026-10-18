@@ -132,6 +132,14 @@ export const TAIKAI_EVENTS = [
   { date: '2027-01-23', title: 'Intercollegiate Taikai' },
 ];
 
+export const SOCIAL_EVENTS = [
+  { date: '2026-09-29', title: 'Icebreaker', image: '/social/example-1.jpg' },
+  { date: '2026-05-01', title: 'Whistler Retreat', image: '/social/example-3.jpg' },
+  { date: '2026-04-03', title: 'Karaoke Social', image: '/social/example-3.jpg' },
+  { date: '2026-02-22', title: 'Ski/Snowboard Trip', image: '/social/example-3.jpg' },
+  { date: '2026-02-14', title: `Valentine's Day Dinner`, image: '/social/example-2.jpg' },
+];
+
 export const MERCH_ITEMS = [
   { name: 'UBC Kendo water bottle', image: '/merch/bottle.png' },
   { name: 'Kendo Monster sticker', image: '/merch/monster-sticker.png' },
