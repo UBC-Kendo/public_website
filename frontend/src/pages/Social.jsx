@@ -3,7 +3,7 @@ import './Events.css';
 export default function Social() {
   return (
     <div className="events">
-      <title>UBC Kendo Club | Social</title>
+      <title>Social | UBC Kendo</title>
       <h1 className="events__title">Social</h1>
       <div className="events__empty-state">
         <p className="events__empty-text">
