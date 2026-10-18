@@ -103,7 +103,7 @@ export const FAQS = [
   {
     q: 'If you have any more questions...',
     a: 'Contact us at ubckendo@gmail.com or come visit us in person!',
-  }
+  },
 ];
 
 export const EVENT_PAGES = [
@@ -129,7 +129,7 @@ export const TAIKAI_EVENTS = [
   { date: '2026-08-07', title: 'CNKF Taikai' },
   { date: '2026-10-10', title: 'UBC Taikai' },
   { date: '2026-10-24', title: 'BCKF Taikai' },
-  { date: '2027-01-23', title: 'Intercollegiate Taikai'}
+  { date: '2027-01-23', title: 'Intercollegiate Taikai' },
 ];
 
 export const MERCH_ITEMS = [
