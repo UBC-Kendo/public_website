@@ -33,7 +33,7 @@ export default function Home() {
             aria-hidden="true"
             className="home__about-overlay"
           />
-          <img src="/about.jpg" alt="UBC Kendo Club members" className="home__about-photo" />
+          <img src="/about.jpg" alt="UBC Kendo Club members" className="home__about-photo" loading="lazy" />
           <div className="home__about-content">
             <h2 className="home__about-title">ABOUT UBC KENDO CLUB</h2>
             <p className="home__about-tag">EST. 1978</p>
@@ -122,7 +122,7 @@ export default function Home() {
           <div className="home__exec-grid">
             {EXEC_TEAM.map((exec) => (
               <div key={exec.name} className="home__exec-card">
-                <img src={exec.photo} alt="" className="home__exec-photo" />
+                <img src={exec.photo} alt="" className="home__exec-photo" loading="lazy" />
                 <div>
                   <h3 className="home__exec-name">{exec.name}</h3>
                   <p className="home__exec-role">{exec.role}</p>

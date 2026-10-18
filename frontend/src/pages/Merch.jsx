@@ -10,7 +10,7 @@ export default function Merch() {
         <h1 className="merch__title">Merch</h1>
         <div className="merch__gallery">
           {MERCH_ITEMS.map((item) => (
-            <img key={item.name} src={item.image} alt={item.name} className="merch__item" />
+            <img key={item.name} src={item.image} alt={item.name} className="merch__item" loading="lazy" />
           ))}
         </div>
         <p className="merch__text">

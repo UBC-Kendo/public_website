@@ -34,7 +34,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar__inner">
         <Link to="/" className="navbar__brand" onClick={closeMenus}>
-          <img src="/UBCKendo_LogoTransparent.png" className="navbar__logo" />
+          <img src="/UBCKendo_LogoTransparent.png" alt="UBC Kendo logo" className="navbar__logo" />
           <span className="navbar__brand-text">UBC KENDO</span>
         </Link>
         <button
