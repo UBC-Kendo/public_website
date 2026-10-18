@@ -103,8 +103,8 @@ export const FAQS = [
 ];
 
 export const EVENT_PAGES = [
-  { label: 'Taikai', path: '/events/taikai' },
-  { label: 'Social', path: '/events/social' },
+  { label: 'taikai', path: '/events/taikai' },
+  { label: 'social', path: '/events/social' },
 ];
 
 // NOT FULLY DONE

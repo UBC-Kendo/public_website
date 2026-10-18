@@ -50,7 +50,7 @@ export default function Navbar() {
         </button>
         <div className={`navbar__links${menuOpen ? ' navbar__links--open' : ''}`}>
           <Link to="/" className="navbar__link" onClick={closeMenus}>
-            Home
+            about
           </Link>
           <div
             className="navbar__dropdown"
@@ -64,7 +64,7 @@ export default function Navbar() {
               aria-expanded={eventsOpen}
               onClick={() => setEventsOpen((open) => (canHover() ? true : !open))}
             >
-              Events <span aria-hidden="true">▾</span>
+              events <span aria-hidden="true">▾</span>
             </button>
             {eventsOpen && (
               <ul className="navbar__dropdown-menu">
@@ -79,10 +79,10 @@ export default function Navbar() {
             )}
           </div>
           <Link to="/merch" className="navbar__link" onClick={closeMenus}>
-            Merch
+            merch
           </Link>
           <Link to="/contact" className="navbar__link" onClick={closeMenus}>
-            Contact
+            contact
           </Link>
           {/* INSTAGRAM LINK */}
           <a
