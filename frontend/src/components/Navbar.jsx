@@ -66,7 +66,9 @@ export default function Navbar() {
             >
               events <span aria-hidden="true">▾</span>
             </button>
-            {eventsOpen && (
+            <div
+              className={`navbar__dropdown-wrap${eventsOpen ? ' navbar__dropdown-wrap--open' : ''}`}
+            >
               <ul className="navbar__dropdown-menu">
                 {EVENT_PAGES.map((page) => (
                   <li key={page.path}>
@@ -76,7 +78,7 @@ export default function Navbar() {
                   </li>
                 ))}
               </ul>
-            )}
+            </div>
           </div>
           <Link to="/merch" className="navbar__link" onClick={closeMenus}>
             merch
