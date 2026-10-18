@@ -36,10 +36,12 @@ When installing a new package to the website, please follow the steps below:
 
 ## Run
 
-You can run the website in development mode by executing the following command:
+You can run the website in development mode by executing the following commands:
 
 ```bash
 npm run dev
+npm run build
+npm run preview
 ```
 
 ## Linters
@@ -66,6 +68,14 @@ to analyze the code for potential errors.
 
 Core site content is centralized in `src/data/kendoData.js`, allowing non-technical executives to update site information without modifying component code.
 
-<!-- * **Tournament bracket:** Set EVENT_DATA.isActive` to `true` and update `bracketUrl`. -->
-* **Practice schedule and locations:** Modify the `PRACTICE_SCHEDULE` and `LOCATIONS` arrays.
-* **Executives and instructors:** Edit the `EXEC_TEAM` and `INSTRUCTORS` arrays.
+| What | Export | Notes |
+| --- | --- | --- |
+| Practice schedule | `PRACTICE_SCHEDULE` | Term, locations, days and beginner and senior times |
+| Practice venues | `LOCATIONS` | Used by the footer, and `PRACTICE_SCHEDULE` reads the map links from here |
+| Instructors | `INSTRUCTORS` | Grouped on the page by `role` |
+| Exec team | `EXEC_TEAM`, `EXEC_TERM` | Photos go in `public/execs/` |
+| FAQ | `FAQS` | Each entry has `q` and `a` |
+| Taikai calendar | `TAIKAI_EVENTS` |  |
+<!-- | Featured Taikai card | `EVENT_DATA` | Set `hasActiveEvent` to `true` to show it at the top of the Taikai page, and add a `bracketUrl` for a live bracket | -->
+| Merch gallery | `MERCH_ITEMS` | Images go in `public/merch/` |
+| Events dropdown | `EVENT_PAGES` | A new page also needs a `<Route>` in `App.jsx` |
