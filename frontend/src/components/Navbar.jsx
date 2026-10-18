@@ -7,6 +7,7 @@ export default function Navbar() {
   const [eventsOpen, setEventsOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const eventsRef = useRef(null);
+  const canHover = () => window.matchMedia('(hover: hover)').matches;
 
   const closeMenus = () => {
     setMenuOpen(false);
@@ -33,7 +34,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar__inner">
         <Link to="/" className="navbar__brand" onClick={closeMenus}>
-          <img src="/logo.png" className="navbar__logo" />
+          <img src="/UBCKendo_LogoTransparent.png" className="navbar__logo" />
           <span className="navbar__brand-text">UBC KENDO</span>
         </Link>
         <button
@@ -51,12 +52,17 @@ export default function Navbar() {
           <Link to="/" className="navbar__link" onClick={closeMenus}>
             Home
           </Link>
-          <div className="navbar__dropdown" ref={eventsRef}>
+          <div
+            className="navbar__dropdown"
+            ref={eventsRef}
+            onMouseEnter={() => canHover() && setEventsOpen(true)}
+            onMouseLeave={() => canHover() && setEventsOpen(false)}
+          >
             <button
               type="button"
               className="navbar__link navbar__dropdown-toggle"
               aria-expanded={eventsOpen}
-              onClick={() => setEventsOpen((open) => !open)}
+              onClick={() => setEventsOpen((open) => (canHover() ? true : !open))}
             >
               Events <span aria-hidden="true">▾</span>
             </button>
