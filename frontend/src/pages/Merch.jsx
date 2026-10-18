@@ -5,6 +5,7 @@ import { MERCH_ITEMS } from '../data/kendoData';
 export default function Merch() {
   return (
     <div className="merch">
+      <title>UBC Kendo Club | Merch</title>
       <div className="merch__inner">
         <h1 className="merch__title">Merch</h1>
         <div className="merch__gallery">

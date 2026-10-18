@@ -37,6 +37,7 @@ export default function Taikai() {
 
   return (
     <div className="events">
+      <title>UBC Kendo Club | Taikai</title>
       <h1 className="events__title">Taikai</h1>
 
       {hasActiveEvent && (
