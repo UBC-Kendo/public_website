@@ -1,0 +1,61 @@
+.contact {
+  background-color: #30518b;
+  background-image:
+    linear-gradient(rgba(24, 45, 92, 0.65), rgba(24, 45, 92, 0.65)), url('/piyoshi-bg.png');
+  color: var(--color-white);
+  padding: 60px 20px 160px;
+  flex: 1;
+}
+
+.contact > * {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact__title {
+  display: table;
+  margin: 0 auto 40px;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.contact__title::after {
+  content: '';
+  display: block;
+  height: 8px;
+  margin-top: 8px;
+  background-color: #e4c08c;
+}
+
+.contact__text {
+  margin-bottom: 24px;
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+}
+
+.contact__link {
+  color: var(--color-accent-light);
+  text-decoration: none;
+}
+
+.contact__link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 40px 16px 60px;
+  }
+
+  .contact__title {
+    font-size: 2.2rem;
+  }
+
+  .contact__text {
+    font-size: var(--font-size-md);
+  }
+}
