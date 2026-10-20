@@ -10,7 +10,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .navbar__brand {
@@ -120,21 +119,14 @@
   display: none;
 }
 
-@media (min-width: 901px) {
-  .navbar__dropdown-menu::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 0;
-    right: 0;
-    height: 8px;
-  }
-}
-
 @media (max-width: 900px) {
   .navbar {
     padding: 16px 12px;
     position: relative;
+  }
+
+  .navbar__inner {
+    flex-wrap: wrap;
   }
 
   .navbar__logo {

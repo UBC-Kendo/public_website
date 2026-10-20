@@ -75,7 +75,7 @@ Core site content is centralized in `src/data/kendoData.js`, allowing non-techni
 | Instructors | `INSTRUCTORS` | Grouped on the page by `role` |
 | Exec team | `EXEC_TEAM`, `EXEC_TERM` | Photos go in `public/execs/` |
 | FAQ | `FAQS` | Each entry has `q` and `a` |
-| Taikai calendar | `TAIKAI_EVENTS` |  |
-<!-- | Featured Taikai card | `EVENT_DATA` | Set `hasActiveEvent` to `true` to show it at the top of the Taikai page, and add a `bracketUrl` for a live bracket | -->
+| Taikai calendar | `TAIKAI_EVENTS` | `date` as `YYYY-MM-DD`, sorted and split into upcoming and past automatically |
+| Social events | `SOCIAL_EVENTS` | `date`, `title` and `image` (in `public/social/`), grouped by year |
 | Merch gallery | `MERCH_ITEMS` | Images go in `public/merch/` |
 | Events dropdown | `EVENT_PAGES` | A new page also needs a `<Route>` in `App.jsx` |

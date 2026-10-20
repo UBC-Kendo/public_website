@@ -3,7 +3,6 @@
   background-image:
     linear-gradient(rgba(24, 45, 92, 0.65), rgba(24, 45, 92, 0.65)), url('/piyoshi-bg.png');
   color: var(--color-white);
-  color: var(--color-white);
   padding: 60px 20px 160px;
   flex: 1;
 }
@@ -29,7 +28,7 @@
   display: block;
   height: 8px;
   margin-top: 8px;
-  background-color: var(--color-accent-light, #e4c08c);
+  background-color: #e4c08c;
 }
 
 .contact__text {
@@ -39,7 +38,7 @@
 }
 
 .contact__link {
-  color: var(--color-accent-light, #93c5fd);
+  color: var(--color-accent-light);
   text-decoration: none;
 }
 

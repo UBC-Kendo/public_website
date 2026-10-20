@@ -56,8 +56,8 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
   margin-bottom: 20px;
-  font-size: var(--font-size-label);
-  color: var(--color-text-strong);
+  font-size: var(--font-size-sm);
+  color: var(--color-subtle);
 }
 
 .events__bracket-wrapper {
@@ -151,7 +151,7 @@
 }
 
 .timeline__item--highlight .timeline__title {
-  color: var(--color-accent-light, #93c5fd);
+  color: var(--color-accent-light);
 }
 
 .social__year-group {

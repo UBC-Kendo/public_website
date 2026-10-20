@@ -1,11 +1,10 @@
 import './Events.css';
 import { EVENT_DATA, TAIKAI_EVENTS } from '../data/kendoData';
 
-const formatDate = (iso, endIso) => {
+const formatDate = (iso) => {
   const [y, m, d] = iso.split('-');
-  const range = endIso ? `-${endIso.split('-')[2]}` : '';
   const year = y === String(new Date().getFullYear()) ? '' : `.${y.slice(2)}`;
-  return `${m}.${d}${range}${year}`;
+  return `${m}.${d}${year}`;
 };
 
 function TimelineList({ items, highlightFirst }) {
@@ -17,7 +16,7 @@ function TimelineList({ items, highlightFirst }) {
           className={`timeline__item${highlightFirst && i === 0 ? ' timeline__item--highlight' : ''}`}
         >
           <div className="timeline__row">
-            <span className="timeline__date">{formatDate(item.date, item.endDate)}</span>
+            <span className="timeline__date">{formatDate(item.date)}</span>
             <span className="timeline__line" />
           </div>
           <p className="timeline__title">{item.title}</p>
