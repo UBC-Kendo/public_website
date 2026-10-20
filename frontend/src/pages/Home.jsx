@@ -33,7 +33,12 @@ export default function Home() {
             aria-hidden="true"
             className="home__about-overlay"
           />
-          <img src="/about.jpg" alt="UBC Kendo Club members" className="home__about-photo" loading="lazy" />
+          <img
+            src="/about.jpg"
+            alt="UBC Kendo Club members"
+            className="home__about-photo"
+            loading="lazy"
+          />
           <div className="home__about-content">
             <h2 className="home__about-title">ABOUT UBC KENDO CLUB</h2>
             <p className="home__about-tag">EST. 1978</p>

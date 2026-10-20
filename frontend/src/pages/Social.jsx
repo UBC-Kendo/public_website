@@ -10,9 +10,9 @@ export default function Social() {
       <title>Social | UBC Kendo</title>
       <h1 className="events__title">Social</h1>
       <p className="social__intro">
-  Outside of regular practice, we organize special events from time to time. Here is a look at
-  some of them!
-</p>
+        Outside of regular practice, we organize special events from time to time. Here is a look at
+        some of them!
+      </p>
 
       {years.length === 0 && (
         <div className="events__empty-state">
