@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react';
 import './Home.css';
-import { PRACTICE_SCHEDULE, EXEC_TERM, EXEC_TEAM, INSTRUCTORS, FAQS } from '../data/kendoData';
+import { PRACTICE_SCHEDULE, PRACTICE_CALENDAR, EXEC_TERM, EXEC_TEAM, INSTRUCTORS, FAQS } from '../data/kendoData';
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -100,6 +100,25 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* PRACTICE CALENDAR */}
+<section className="home__calendar" aria-label="Practice calendar">
+  <div className="home__calendar-inner">
+    <a
+      href={PRACTICE_CALENDAR.image}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="home__calendar-link"
+    >
+      <img
+        src={PRACTICE_CALENDAR.image}
+        alt={PRACTICE_CALENDAR.alt}
+        className="home__calendar-image"
+        loading="lazy"
+      />
+    </a>
+  </div>
+</section>
 
       {/* INSTRUCTORS */}
       <section className="home__instructors">

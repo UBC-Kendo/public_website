@@ -24,6 +24,11 @@ export const PRACTICE_SCHEDULE = [
   },
 ];
 
+export const PRACTICE_CALENDAR = {
+  image: '/practice-calendar.png',
+  alt: 'Practice calendar for the 2026/27 academic year',
+};
+
 export const INSTRUCTORS = [
   { name: 'Tsuyoshi Hamanaka', rank: '6 Dan Renshi', role: 'Head Sensei' },
   { name: 'Joon Young Suk', rank: '5 Dan', role: 'UBC Sensei' },
