@@ -77,7 +77,7 @@ export const EXEC_TEAM = [
 
 export const FAQS = [
   {
-    q: 'I have no prior experience in kendo, do you guys take new beginners?',
+    q: 'I have no prior experience in kendo, do you take new beginners?',
     a: `Yes we do! 90% of our club members are new to kendo when they first joined the club. 
         We are here to expand the Kendo community and would be happy to have new members joining us and practice with us.`,
   },
