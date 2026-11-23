@@ -25,6 +25,7 @@ export default function Home() {
 
   return (
     <div style={{ color: '#1a1a1a', lineHeight: '1.6' }}>
+      <title>UBC Kendo Club | Home</title>
       {/* HERO SECTION */}
       <section className="home__hero">
         <img src="/hero-bg.png" alt="" className="home__hero-bg" />
@@ -47,7 +48,7 @@ export default function Home() {
             loading="lazy"
           />
           <div className="home__about-content">
-            <h2 className="home__about-title">ABOUT UBC KENDO CLUB</h2>
+            <h1 className="home__about-title">ABOUT UBC KENDO CLUB</h1>
             <p className="home__about-tag">EST. 1978</p>
             <p className="home__about-copy home__about-copy--top">
               University of British Columbia Kendo Club is a student-led recreational martial art

@@ -7,7 +7,7 @@ export default function Social() {
 
   return (
     <div className="events">
-      <title>Social | UBC Kendo</title>
+      <title>Social | UBC Kendo Club</title>
       <h1 className="events__title">Social</h1>
       <p className="social__intro">
         Outside of regular practice, we organize special events from time to time. Here is a look at
