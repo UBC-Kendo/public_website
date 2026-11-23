@@ -38,7 +38,6 @@ export const INSTRUCTORS = [
   { name: 'Terry Okitsu', rank: '4 Dan', role: 'Tozenji Sensei' },
   { name: 'Mari Kobayashi', rank: '4 Dan', role: 'Tozenji Sensei' },
   { name: 'Andrew Chen', rank: '4 Dan', role: 'Tozenji Sensei' },
-  { name: 'Nanako Nohira', rank: '4 Dan', role: 'Tozenji Sensei' },
 ];
 
 export const EXEC_TERM = '2026/2027';
