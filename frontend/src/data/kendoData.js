@@ -47,38 +47,33 @@ export const EXEC_TEAM = [
   {
     role: 'President',
     name: 'William Zhu',
-    photo: '/execs/placeholder.jpg',
-    bio: `Hi, I'm William`,
+    photo: '/execs/president.jpg',
+     
   },
   {
     role: 'Vice President',
     name: 'Yuma Ogasawara',
-    photo: '/execs/placeholder.jpg',
-    bio: `Hi, I'm William`,
+    photo: '/execs/vp.jpg',
   },
   {
     role: 'Treasurer',
     name: 'Tim Wang',
-    photo: '/execs/placeholder.jpg',
-    bio: `Hi, I'm William`,
+    photo: '/execs/treasurer.jpg',
   },
   {
     role: 'Secretary',
     name: 'Arthur Wong',
-    photo: '/execs/placeholder.jpg',
-    bio: `Hi, I'm William`,
+    photo: '/execs/secretary.jpg',
   },
   {
     role: 'Publicity Coordinator',
     name: 'Brian Li',
-    photo: '/execs/placeholder.jpg',
-    bio: `Hi, I'm William`,
+    photo: '/execs/pubcoord1.jpg',
   },
   {
     role: 'Publicity Coordinator',
     name: 'Jonathan Eng',
-    photo: '/execs/placeholder.jpg',
-    bio: `Hi, I'm William`,
+    photo: '/execs/pubcoord2.jpg',
   },
 ];
 
@@ -138,11 +133,11 @@ export const TAIKAI_EVENTS = [
 ];
 
 export const SOCIAL_EVENTS = [
-  { date: '2026-09-29', title: 'Icebreaker', image: '/social/example-1.jpg' },
-  { date: '2026-05-01', title: 'Whistler Retreat', image: '/social/example-3.jpg' },
-  { date: '2026-04-03', title: 'Karaoke Social', image: '/social/example-3.jpg' },
-  { date: '2026-02-22', title: 'Ski/Snowboard Trip', image: '/social/example-3.jpg' },
-  { date: '2026-02-14', title: `Valentine's Day Dinner`, image: '/social/example-2.jpg' },
+  { date: '2026-09-29', title: 'Icebreaker', image: '/social/Icebreaker-2026.jpg' },
+  { date: '2026-05-01', title: 'Whistler Retreat', image: '/social/Whistler-2026.png' },
+  { date: '2026-04-03', title: 'Karaoke Social', image: '/social/Karaoke-2026.jpg' },
+  { date: '2026-02-22', title: 'Ski/Snowboard Trip', image: '/social/Ski-2026.jpg' },
+  { date: '2026-02-14', title: `Valentine's Day Dinner`, image: '/social/Valentine-2026.jpg' },
 ];
 
 export const MERCH_ITEMS = [

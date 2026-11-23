@@ -150,7 +150,6 @@ export default function Home() {
                 <div>
                   <h3 className="home__exec-name">{exec.name}</h3>
                   <p className="home__exec-role">{exec.role}</p>
-                  <p className="home__exec-bio">{exec.bio}</p>
                 </div>
               </div>
             ))}
