@@ -48,7 +48,6 @@ export const EXEC_TEAM = [
     role: 'President',
     name: 'William Zhu',
     photo: '/execs/president.jpg',
-     
   },
   {
     role: 'Vice President',
