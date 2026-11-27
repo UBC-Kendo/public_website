@@ -82,6 +82,11 @@ export const FAQS = [
         We are here to expand the Kendo community and would be happy to have new members joining us and practice with us.`,
   },
   {
+    q:'When can I join the club?',
+    a:`Beginner intakes only occur at the start of the Spring and Fall semesters, in September and January. 
+    If you already have Kendo experience however, please feel free to reach out to us as you're welcome to join at any point throughout the year! `
+  },
+  {
     q: 'How much is the membership fee?',
     a: 'Membership is $70 per academic semester at UBC.',
   },
